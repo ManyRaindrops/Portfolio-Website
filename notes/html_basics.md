@@ -49,6 +49,7 @@ Example:
 
 ```
 ## In-Depth (Advanced)
+### High-Level Overview
 Nesting and wrapping are essential techniques used in the formating of HTML code. Nested elements terminate at an identical element that includes an backslash to signify it's purpose as an end marker.
 
 ```HTML
@@ -60,7 +61,7 @@ Nesting and wrapping are essential techniques used in the formating of HTML code
 
 There are 7 main HTML document elements:
 1. **Structural elements** (e.g., `<header>`, `<footer>`, `<section>`, `<nav>`, `<main>` (should only be one per page), `<article>` (distinct from the page content as independent bit of information), and `<aside>` (ex. info on a sidebar)).
-2. **Content tags** (e.g. `<p>` (paragraph), `<h1>` (header one), `<ul>` (unordered list), `<li>` (list element), `<a>` (link), `<img>`, `<video>`)
+2. **Content elements** (e.g. `<p>` (paragraph), `<h1>` (header one), `<ul>` (unordered list), `<li>` (list element), `<a>` (link), `<img>`, `<video>`)
 
 ```HTML
 <img src="image.jpg" alt="Description of the image">
@@ -197,3 +198,117 @@ If it is searchable, the webpage code must be interpretable by the browsers of t
 When a technology is not supported, the webpage should be able to fallback onto simpler technologies that are generally more widespread. For example, if a computer cannot run JavaScript, the webpage should still be viewable and moderately functional. Or, if a video cannot be played, there can be an option to download it.
 
 While the website may be accessible, it must also be quick to load. Reducing the size of HTML, CSS, and JavaScript code as much as possible, using loss-less compressed images, and loading data-heavy content after the rest helps reduce latency time.
+
+### Ordered Explanation
+#### DOM
+HTML utilizes the Document Object Model (DOM) that connects pages with a logical tree in which each branch ends in a node which contains an object, allowing for the tree to be programmatically accessed.
+
+#### Elements
+This logical order consists of a series of elements which enclose or wrap each other and content parts. Elements are distinguished by tags: opening tag, content, and closing tag.
+
+```HTML
+<h1>Learning HTML</h1>
+```
+
+#### Tags
+The tag name is the content in within the angled brackets, and the element is the totality of the tags and content. Elements can include nested elements, which must follow the same syntax as any other HTML element.
+
+```HTML
+<p>This paragraph has some
+  <strong><em>strongly emphasized</em></strong>
+  content</p>
+```
+
+Tags are not displayed, but interpreted by the browser as indicators of how the content should be treated. In certain causes, closing tags may be implied by the interpreter if omitted, but it is best practice to ensure syntatical precision.
+
+```HTML
+<ul>
+  <li>Blendan Smooth
+  <li>Hoover Sukhdeep
+  <li>Toasty McToastface
+</ul>
+```
+
+The following goes over what can be safely omitted: https://html.spec.whatwg.org/multipage/syntax.html#syntax-tag-omission. 
+
+#### Element Types
+There are three types of elements: replaced, non-replaced, and void elements.
+1. Replaced elements are those in which the text within the tags is replaced by another media type, such as an image or a video. Those are called objects.
+
+```HTML
+<img src="switch.svg" alt="light switch">
+```
+
+2. Non-replaced elements simply display the text that is within them
+
+```HTML
+<p>RAG from Scratch, Web-Development Journey, and more.</p>
+```
+
+3. Void tags are represented by a single tag, such as `<img>`. A slash may be added before the closing angled bracket for clarity.
+
+```HTML
+<img src="switch.svg" alt="light switch">
+<meta charset="UTF-8">
+
+```
+
+#### Attributes
+These modify elements or provide relevant information and only appear within the opening tag. The opening tag can include zero or more attributes which are separated by spaces. Attributes exist as name-value pairs in which an attribute name is connected to an attribute value by an equals sign, values are enclosed in quotation marks. However, some attributes can be without a value if the value is implied (such as for boolean attributes). Some attributes are universal, while others can only be used with certain tagss.
+
+```HTML
+<a href="#register" target="_self">Registration</a>
+```
+
+#### Semantics
+Both tags and attributes have various kinds and values that can be attributed to them which have literal semantic meaning, helpful for assistive technology and search engines.
+
+#### Structure
+The first is text that should go on an HTML document is a node called the "doctype": `<!DOCTYPE html>`. This ensures that the browser will used the standard interpretative methods to process the HTML file. Other methods are called "quirk modes": https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
+
+Every HTML document includes the roote `<html>` element which contains the `<head>` and `<body>` elements. The opening `<html>` tag has the `lang` attribute which defines the main language of the document by language and (optional) region. The `lang` attribute can also identify exceptions to the main language, if there are others present in the document.
+
+```HTML
+<html lang="en">
+<html lang="en-US">
+```
+
+The `<head>` contains vital functionality metadata used by browsers to display the `<body>` correctly. Within `<head>` often include character set, document title, viewport settings, stylesheet links, description, and icons. Here are some of the most important
+1. Character encoding is the `charset` attribute applied to the `<meta>` tag and allows the browser to render the characters of the page correctly. `UTF-8` is the standard input for this field even though the default encoding in most browsers is `windows-1252`.
+2. Document titles are distinguished by the unique `<title>` tag and communicate the designated title of the page.
+3. The `viewport` meta tag enables the content to be rendered according to the size of the screen avilable and is instantiated by the `name` attribute combined with the `content` attribute. The `name` attribute can be used to instantiate other metadata bits such as author, description, and keywords.
+4. The stylesheet is the CSS file that modifies the appearance of the document. By linking it, it can be applied to that particular HTML document. It is a void element `<link>` instantited with the `rel` (relationship) and `href` (links) attributes. This element can be used to create various relations. 
+
+5. Rel currently has 25 different values: https://html.spec.whatwg.org/multipage/links.html#linkTypes. Three main values for `rel` used here will be: stylesheet, icon (for the favicon), alternate (for various translations of the page), and canonical (for the main version of the page). See https://favicon.io/favicon-converter/ for favicons.
+
+
+```HTML
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- metadata -->
+    <meta charset="utf-8" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+    <meta name="author" content="Bertrand Lee">
+    <meta name="description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
+    <meta name="keywords" content="Bertrand Lee, Portfolio, Computer Science, Machine Learning, AI, RAG, Web Development">
+    
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="../images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../images/android-chrome-512x512.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- other -->
+    <title>Bertrand - Computer Science Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- translations -->
+    <link rel="alternate" href="fr-FR/indice.html" hreflang="fr-FR">
+    <link rel="canonical" href="index.html" hreflang="en-US">
+  </head>
+  <body>
+  </body>
+</html>
+```
