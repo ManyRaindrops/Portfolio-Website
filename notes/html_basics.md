@@ -1,3 +1,4 @@
+
 # HTML Basics
 *Date: 2025-01-28*
 
@@ -5,6 +6,7 @@
 The Hypertext Markup Language (HTML) is a coding language used to define the essential content and layout of a website like a kind of skeleton.
 
 ## Deeper Dive (Intermediate)
+```MD
 1. <!DOCTYPE html> declares that the file is HTML5: "Document type"
 2. <html> is the root element that holds the content of the page
 3. <head> contains the neccessary meta-data and links to external files
@@ -16,7 +18,7 @@ The Hypertext Markup Language (HTML) is a coding language used to define the ess
 9. <link rel="stylesheet" href="style.css"> links the CSS to the page, allowing for further customization of the appearance of the page
 10. "href" (for links) and "src" (for images) can be added to tags, these are called attributes.
 11. <script src="main.js"></script> links the JavaScript file to the page for interactive purposes such as smooth scrolling
-
+```
 Example:
 ```HTML
 <!DOCTYPE html>
