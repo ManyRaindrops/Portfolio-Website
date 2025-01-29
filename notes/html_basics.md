@@ -59,8 +59,8 @@ Nesting and wrapping are essential techniques used in the formating of HTML code
 ```
 
 There are 7 main HTML document elements:
-1. **Structural elements** (e.g., <header>, <footer>, <section>, <nav>, <main> (should only be one per page), <article> (distinct from the page content as independent bit of information), <aside> (ex. info on a sidebar) ).
-2. **Content tags** (e.g. <p> (paragraph), <h1> (header one), <ul> (unordered list), <li> (list element), <a> (link), <img>, <video>)
+1. **Structural elements** (e.g., `<header>`, `<footer>`, `<section>`, `<nav>`, `<main>` (should only be one per page), `<article>` (distinct from the page content as independent bit of information), and `<aside>` (ex. info on a sidebar)).
+2. **Content tags** (e.g. `<p>` (paragraph), `<h1>` (header one), `<ul>` (unordered list), `<li>` (list element), `<a>` (link), `<img>`, `<video>`)
 
 ```HTML
 <img src="image.jpg" alt="Description of the image">
@@ -79,14 +79,14 @@ There are 7 main HTML document elements:
 </form>
 ```
 
-3. **Meta-data elements**, placed in the <head> section (e.g. <meta> (character encoding, viewport settings, or author name), <link> (links to external resources), <title> (text to appear in the browser's title bar), and <base> (specifies a root URL for all relative URLs in the document) )
+3. **Meta-data elements**, placed in the `<head>` section (e.g. `<meta>` (character encoding, viewport settings, or author name), `<link>` (links to external resources), `<title>` (text to appear in the browser's title bar), and `<base>` (specifies a root URL for all relative URLs in the document) )
 
 ```HTML
 <title>Bertrand's Portfolio</title>
 <base href="https://manyraindrops.github.io/Portfolio-Website/">
 ```
 
-4. **Form elements**, for user interaction (e.g. <input> (ex. text fields, checkboxes, buttons), <textarea> (multi-line text input area), <button>, <select> or <option> (dropdown menu), )
+4. **Form elements**, for user interaction (e.g. `<input>` (ex. text fields, checkboxes, buttons), `<textarea>` (multi-line text input area), `<button>`, `<select>` or `<option>` (dropdown menu), )
 
 ```HTML
 <select name="country">
@@ -95,7 +95,7 @@ There are 7 main HTML document elements:
 </select>
 ```
 
-5. **Interactive elements**, often used in conjunction with JavaScript (e.g. <details> (collapsible section) or <dialog> (popup box or window),)
+5. **Interactive elements**, often used in conjunction with JavaScript (e.g. `<details>` (collapsible section) or `<dialog>` (popup box or window),)
 
 6. **Style & Script Elements**, embedding CSS or JavaScript in the HTML
 
