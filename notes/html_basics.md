@@ -6,19 +6,18 @@
 The Hypertext Markup Language (HTML) is a coding language used to define the essential content and layout of a website like a kind of skeleton.
 
 ## Deeper Dive (Intermediate)
-```MD
-1. <!DOCTYPE html> declares that the file is HTML5: "Document type"
-2. <html> is the root element that holds the content of the page
-3. <head> contains the neccessary meta-data and links to external files
-4. <body> contains the visible content structure of the page, which is formed by the arrangment of sub-elements within it
-5. <header> and <footer> define the corresponding sections of a page
-6. <section> is a general definition for a part of the page that is neither at the very top or bottom
-7. Content in html files are wrapped (tag-text-tag) with tags like <h1> (headings) or <p> (paragraphs)
-8. <a href="mailto:...">...</a> is used for links such as urls or email addresses
-9. <link rel="stylesheet" href="style.css"> links the CSS to the page, allowing for further customization of the appearance of the page
+1. `<!DOCTYPE html>` declares that the file is HTML5: "Document type"
+2. `<html>` is the root element that holds the content of the page
+3. `<head>` contains the neccessary meta-data and links to external files
+4. `<body>` contains the visible content structure of the page, which is formed by the arrangment of sub-elements within it
+5. `<header>` and `<footer>` define the corresponding sections of a page
+6. `<section>` is a general definition for a part of the page that is neither at the very top or bottom
+7. Content in html files are wrapped (tag-text-tag) with tags like `<h1>` (headings) or `<p>` (paragraphs)
+8. `<a href="mailto:...">...</a>` is used for links such as urls or email addresses
+9. `<link rel="stylesheet" href="style.css">` links the CSS to the page, allowing for further customization of the appearance of the page
 10. "href" (for links) and "src" (for images) can be added to tags, these are called attributes.
-11. <script src="main.js"></script> links the JavaScript file to the page for interactive purposes such as smooth scrolling
-```
+11. `<script src="main.js"></script>` links the JavaScript file to the page for interactive purposes such as smooth scrolling
+
 Example:
 ```HTML
 <!DOCTYPE html>
