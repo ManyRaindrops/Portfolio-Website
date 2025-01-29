@@ -3,7 +3,7 @@
 *Date: 2025-01-28*
 
 ## TL;DR (Basic)
-The Hypertext Markup Language (HTML) is a coding language used to define the essential content and layout of a website like a kind of skeleton.
+The Hypertext Markup Language (HTML) is a coding language used to define the essential content and layout of a website as if to define a body but without skin, clothes, or a brain. The looks and functionality of a website is primarily taken care of with CSS and JavaScript.
 
 ## Deeper Dive (Intermediate)
 1. `<!DOCTYPE html>` declares that the file is HTML5: "Document type"
