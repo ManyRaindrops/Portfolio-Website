@@ -185,7 +185,7 @@ While the website may be accessible, it must also be searchable through the inte
 4. Descriptive header tags
 ```HTML
 <h2>Linknet: RAG from Scratch Project</h2>
-``
+```
 
 If it is searchable, the webpage code must be interpretable by the browsers of the target audience. HTML verification can done with online tools such as https://validator.w3.org/.
 
