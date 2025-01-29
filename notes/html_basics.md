@@ -156,4 +156,39 @@ When a character is to be written that is of the HTML syntax set, an alternative
 3. &amp; for &
 4. &quot; for "
 
-Other useful features such as tables, lists (ordered, unordered, definition; numbered, bulleted, and term+definition), HTML5 APIs are also available.
+Other useful features such as tables, lists (ordered, unordered, definition; numbered, bulleted, and term+definition), HTML5 APIs are also available but not overviewed in this note.
+
+In addition to being able to present a functional website to the world, the acceibility of the site to those without common levels of sense abilities, such as eyesight, highly benefit from the inclusion of alt text for images, `<label>` tags for forms, keyboard-navigability (such as using the "tabindex" attribute for custom elements such as divs or spans), ARIA attributes (Accessible Rich Internet Applications), and focus management (ex. when a drop-down menu is selected the first item is focused and a visual indication occurs). With JavaScript, keyboard shortcuts can be made to help with faster navigation.
+
+```HTML
+<div tabindex="0">This is a custom focusable element</div>
+
+<button aria-label="Close" onclick="closeWindow()">X</button>
+```
+
+While the website may be accessible, it must also be searchable through the internet. The process of making it easily searchable is called Search Engine Optimization (SEO). Here are some common practices that improve SEO:
+1. Title tags with relevant keywords
+```HTML
+<title>Bertrand - Computer Science Portfolio</title>
+```
+
+2. Meta descriptions for page content
+```HTML
+<meta name="description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
+```
+
+3. Meta keywords for page content
+```HTML
+<meta name="keywords" content="Bertrand Lee, Portfolio, Computer Science, Machine Learning, AI, RAG, Web Development">
+```
+
+4. Descriptive header tags
+```HTML
+<h2>Linknet: RAG from Scratch Project</h2>
+``
+
+If it is searchable, the webpage code must be interpretable by the browsers of the target audience. HTML verification can done with online tools such as https://validator.w3.org/.
+
+When a technology is not supported, the webpage should be able to fallback onto simpler technologies that are generally more widespread. For example, if a computer cannot run JavaScript, the webpage should still be viewable and moderately functional. Or, if a video cannot be played, there can be an option to download it.
+
+While the website may be accessible, it must also be quick to load. Reducing the size of HTML, CSS, and JavaScript code as much as possible, using loss-less compressed images, and loading data-heavy content after the rest helps reduce latency time.
