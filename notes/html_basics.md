@@ -133,6 +133,11 @@ The following are common attributes:
 2. `class` gives a collective identity to an element, useful for the purposes of styling or manipulation with JavaScript
 3. `src` specifices the source of an image or script, usually its directory in the system computer.
 4. `href` identifies a link, i.e. the destination URL
+
+```HTML
+<li><a href="journal/index.html">Journal</a></li>
+```
+
 5. `alt` identifies a text description for an image (for accessibility)
 
 ```HTML
