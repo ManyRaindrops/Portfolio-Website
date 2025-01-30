@@ -278,8 +278,8 @@ The `<head>` contains vital functionality metadata used by browsers to display t
 2. Document titles are distinguished by the unique `<title>` tag and communicate the designated title of the page.
 3. The `viewport` meta tag enables the content to be rendered according to the size of the screen avilable and is instantiated by the `name` attribute combined with the `content` attribute. The `name` attribute can be used to instantiate other metadata bits such as author, description, and keywords.
 4. The stylesheet is the CSS file that modifies the appearance of the document. By linking it, it can be applied to that particular HTML document. It is a void element `<link>` instantited with the `rel` (relationship) and `href` (links) attributes. This element can be used to create various relations. 
-
 5. Rel currently has 25 different values: https://html.spec.whatwg.org/multipage/links.html#linkTypes. Three main values for `rel` used here will be: stylesheet, icon (for the favicon), alternate (for various translations of the page), and canonical (for the main version of the page). See https://favicon.io/favicon-converter/ for favicons.
+6. `<base>` is used to identify the default URL for all related links, but it is not used ofen.
 
 
 ```HTML
@@ -312,3 +312,28 @@ The `<head>` contains vital functionality metadata used by browsers to display t
   </body>
 </html>
 ```
+
+#### Scripts
+Scripts in JavaScript and other languages can be coded into an HTML document using the `<script>` tag and other languages can be included using the `type` attributes. These are usually put at the end of a document to ensure that the elements are loaded in before the code is triggered and because the loading stack stops the loading of assets when the script is running. The attributes `defer` and `async` reduce the blocking nature of script running and execution.
+
+```HTML
+<script>
+  document.getElementById('switch').addEventListener('click', function() {
+    document.body.classList.toggle('black');
+  });
+</script>
+```
+
+#### Metadata
+The character set declaration and the viewport meta tag are neccessary for every HTML document. They are of the pragma directives and others are of the named type in which the attribute is `name`. The former describe how the page should be parsed while the later usually adds normal metadata. Both are required to be paired with the `content` attribute.
+
+`http-equiv` has several directives (ex.http-equiv="refresh") the most common of which is "refresh," which allows the programmer to build in an automatic refresh, but usually this is not advisable. `content-security-policy` is the most useful as it defines allowed server origins and script endpoints (this protects against cross-site scripting attacks: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy).
+
+```HTML
+<meta http-equiv="content-security-policy" content="default-src https:">
+```
+
+`name` attributes for metadata have a variety of uses, but the most important of which is the `description` value. For more `name` values, see here https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name.
+
+#### Open Graph
+It is a meta tag protocol used to control how links are displayed. Without it, sites will take from the available metadata to construct link previews. It uses the `property` attribute, which is not officially supported (only widely so), and ensures that attribute values from it won't interfere with `name` or `hhtp-equiv` attributes: https://ogp.me/
