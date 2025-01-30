@@ -17,6 +17,8 @@
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../images/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="../images/android-chrome-512x512.png">
     <link rel="manifest" href="/site.webmanifest">
@@ -31,42 +33,67 @@
 </head>
 <body>
     <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="notes.html">Notes</a></li>
-            <li><a href="journal.html">Journal</a></li>
-            <li><a href="fr-FR/indice.html">fr-FR</a></li>
-        </ul>
+        <fieldset>
+            <legend>Navigation</legend>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="fr-FR/indice.html">fr-FR</a></li>
+            </ul>
+        </fieldset>
     </nav>
 
-    <section id="aboutme">
-        <img src="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ" alt="Bertrand's Picture" class="profile-pic">
-        <h2>About</h2>
-        <p>Aspiring Programmer; aspiring polygot; an aspiring person, but not incomplete.</p>
-    </section>
+    <aside id="connections">
+        <fieldset>
+            <legend>Connections</legend>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">LinkedIn</a></li>
+                <!-- add link for my CV-->
+                <!-- add link for the linknet project-->
+                <!-- add link for any pertinent stuff-->
+            </ul>
+        </fieldset>
+        <div id="controls">
+            <div id="movement">
+                <button id="Top" href="#">Move Up</button>
+                <button id="Bottom" href="#">Move Down</button>
+            <div id="ui-look">
+                <button id="switch" alt="light switch" class="light">Mode</button>
+            </div>
+        </div>
+    </aside>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>RAG from Scratch, Web-Development Journey, and more.</p>
-    </section>
+    <main>
+        <section id="aboutme">
+            <img sizes="10x10" src="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ" alt="Bertrand's Picture" class="profile-pic">
+            <h2>About</h2>
+            <p>Aspiring Programmer; aspiring polygot; an aspiring person, but not incomplete.</p>
+        </section>
 
-    <section id="resume">
-        <h2>Resume</h2>
-        <p>Click to view my CV, updated regularly with Linkden rofile.</p>
-    </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>RAG from Scratch, Web-Development Journey, and more.</p>
+        </section>
 
-    <section id="notes">
-        <h2>Notes</h2>
-        <p>Meta-learning, Programming, and Natural Language</p>
-    </section>
+        <section id="resume">
+            <h2>Resume</h2>
+            <p>Click to view my CV, updated regularly with Linkden rofile.</p>
+        </section>
 
-    <section id="journal">
-        <h2>Journal</h2>
-        <p>The self-documentation of my progress as I work on this website.</p>
-    </section>
+        <section id="notes">
+            <h2>Notes</h2>
+            <p>Meta-learning, Programming, and Natural Language</p>
+        </section>
+
+        <section id="journal">
+            <h2>Journal</h2>
+            <p>The self-documentation of my progress as I work on this website.</p>
+        </section>
+    </main>
 
     <footer>
         <p>© 2025 Bertrand Lee</p>

@@ -337,3 +337,89 @@ The character set declaration and the viewport meta tag are neccessary for every
 
 #### Open Graph
 It is a meta tag protocol used to control how links are displayed. Without it, sites will take from the available metadata to construct link previews. It uses the `property` attribute, which is not officially supported (only widely so), and ensures that attribute values from it won't interfere with `name` or `hhtp-equiv` attributes: https://ogp.me/
+
+#### Semantic HTML
+There are over 100 HTML elements and programmers can create custom elements. Meaning allows programmers and assistive technology to work with HTMl documents with greater ease. The `role` attribute, a global attribute usable on any element, and can be given any value.
+
+```HTML
+<div role="banner">
+  <span role="heading" aria-level="1">Three words</span>
+  <div role="navigation">
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+  </div>
+</div>
+```
+
+1. `<main>` identifies the main content of a page
+2. `<aside>` identifies tangentially related content
+3. `<article>` identifies an independent instance of content
+4. `<section>` identification a part of the main site content
+5. `<h1>-<h6>` identifies a heading, with heading 1 being the at the top
+6. `<header>` identifies the upmost content of the site, usually for titles, logos, and naviation
+7. `<footers>` identifies the bottommost content of the site, usually for contact information and general links
+
+#### Attributes
+Attributes make HTML powerful, more than any other feature. They are often in name/value pairs placed within the opening tag in order to define behavior, linkages, or functionality of the given element.
+
+1. `Boolean attributes` are always true: autofocus, inert, checked, disabled, required, reversed, allowfullscreen, default, loop, autoplay, controls, muted, readonly, multiple, and selected. They will remain true no matter what value is assigned to them. If toggling between true and false, the atrribute should be added or removed rather than toggling any value.
+
+```JavaScript
+const myMedia = document.getElementById("mediaFile");
+myMedia.removeAttribute("muted");
+myMedia.setAttribute("muted");
+```
+
+2. `id` is an attribute that essentially can be used to identify elements by a unique string and can also be used as a landmark for href links.
+
+```HTML
+<nav>
+  <a href="#reg">Register</a>
+  <a href="#about">About</a>
+  <a href="#teachers">Instructors</a>
+  <a href="#feedback">Testimonials</a>
+</nav>
+<!-- The link points to the section on the page with that id. -->
+```
+
+2. `for` is like `id` and is used with `label` to literally label objects. Likewise `class` does the same, except it has no relevance within HTML execept to link elements to CSS and JavaScript actions.
+
+```HTML
+<fieldset>
+  <legend>Question 5: Who is an aspiring load balancer?</legend>
+  <ul>
+    <li>
+      <input type="radio" name="q5" value="blendan" id="q5blendan">
+      <label for="q5blendan">Blendan Smooth</label>
+    </li>
+    <li>
+      <input type="radio" name="q5" value="hoover" id="q5hoover">
+      <label for="q5hoover">Hoover Sukhdeep</label>
+    </li>
+  </ul>
+</fieldset>
+```
+
+3. With `data-` one can create custom attributes which essentially act as metadata for an element
+
+```HTML
+<img
+  class="spaceship cruiserX3"
+  src="shipX3.png"
+  data-ship-id="324"
+  data-weapons="laserI laserII"
+  data-shields="72%"
+  data-x="414354"
+  data-y="85160"
+  data-z="31940"
+  onclick="spaceships[this.dataset.shipId].blasted()" />
+```
+
+#### Web Components
+HTML templates, custon elements, and the shadow DOM comprise the Web Component Standard which enables creation of customizable elements which are self-contained and reusable. It is best practice to name custom elements using lowercase letters only and using a dash to help distinguish the custom from the standard element set.
+
+The `<template>` element 
+
+Due to the involvement of JavaScript and CSS further development of this set of notes will not continue for now.
