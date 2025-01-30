@@ -417,6 +417,9 @@ myMedia.setAttribute("muted");
   onclick="spaceships[this.dataset.shipId].blasted()" />
 ```
 
+
+other sections skipped temporarily
+
 #### Web Components
 HTML templates, custon elements, and the shadow DOM comprise the Web Component Standard which enables creation of customizable elements which are self-contained and reusable. It is best practice to name custom elements using lowercase letters only and using a dash to help distinguish the custom from the standard element set.
 
