@@ -324,7 +324,31 @@ Cascasing Stylesheets (CSS) utilizes an algorithin to resolve contesting CSS rul
 }
 ```
 
-1. The last rule defined is the rule that applies to the HTML element, meaning specificity is greater for those rules which are below others that deal with the same elements. 
+The algorithm goes through each stage one at a time and falls back on the last one (4) if all else is equal.
+
+1. Importance, affecting rule types (most important listed first):
+
+```MD
+1. transition rule type
+2. !important rule type (following the same order as origin)
+3. animation rule type
+4. normal rule type, such as font-size, background or color
+```
+
+2. Origin has an order of importance of which the most importannt (listed first) override those less important:
+
+```MD
+1. User agent !important: !important from ser agent base styles
+2. Local user styles !important: !important from local user styles
+3. Authored !important: !important definitions of the webpage stylesheet
+4. Authored CSS: stylesheet of the webpage
+5. Local user styles. operating system level, browser preferences, and browser extensions form this layer.
+6. User agent base styles: default browser applied styles.
+```
+
+3. Specificity includes an algorithm that will be gone over in the next section which calculates which calculates what it is called for each rule. Specificity is also cumulative. For example, an ID is more specific than a Type, so the rule given to the ID will override rules given to the Type.
+
+4. The last rule defined is the rule that applies to the HTML element, meaning specificity is greater for those rules which are below others that deal with the same elements. 
 
 ```CSS
 /* this creates a blue button */
@@ -337,26 +361,110 @@ button {
 }
 ```
 
-2. Specificity includes an algorithm that will be gone over in the next section which calculates which calculates what it is called for each rule. Specificity is also cumulative. For example, an ID is more specific than a Type, so the rule given to the ID will override rules given to the Type.
-3. Origin has an order of importance of which the most importannt (listed first) override those less important:
-
-```MD
-1. User agent !important: !important from ser agent base styles
-2. Local user styles !important: !important from local user styles
-3. Authored !important: !important definitions of the webpage stylesheet
-4. Authored CSS: stylesheet of the webpage
-5. Local user styles. operating system level, browser preferences, and browser extensions form this layer.
-6. User agent base styles: default browser applied styles.
-```
-
-4. Importance, affecting rule types (most important listed first):
-
-```MD
-1. transition rule type
-2. !important rule type (following the same order as origin)
-3. animation rule type
-4. normal rule type, such as font-size, background or color
-```
 
 see also https://2019.wattenberger.com/blog/css-cascade and https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 
+### Specifity
+It is calculated with an algorithm which takes into consideration all of the specificity elements culmulatively. It should only be as high as needed in order for the CSS definitions that are intended to be rendered are actually rendered. The score is not a number but consists of three component values: (A, B, C).
+1. `A` id-like specificity
+2. `B` class-like specificity
+3. `C` element-like specificity
+
+When comparing, the values are compared A first and termintes whenever the primary value is greater than the other between two elements. If the two A values are unequal, then the element with the larger A value immediately is marked as more specific, B and C are not evaluated. If the A values are equal, the B values are evaluated. If the B values are equal, the C values are evaluated. The default specificity is (0, 0, 0).
+
+1. The universal selector `*` has no specificty: (0, 0, 0).
+2. Element/type or pseudo-element selectors add element-like specificity, incrementing C by 1.
+3. Class, pseudo-class, or attribute selectors add class-like specificity, incrementing B by 1
+4. The ID selector adds id-like specificity, incrementaing A by 1
+
+Some selectors do not add specificity, but they always add specificity when added in an argument. The following never affect specificity:
+1. Inline style attributes: `<div style="color: red"></div>`
+2. !important declarations: it only changes the origin (Authored)
+
+```CSS
+/* specificity rules apply again if two definitions are marked with !important */
+.branding {
+  color: blue !important;
+}
+
+button {
+  color: red !important;
+}
+```
+
+Specificity can be boosted by writing the selector twice:
+
+```CSS
+.my-button.my-button {
+  background: blue;
+}
+
+button[onclick] {
+  background: grey;
+}
+```
+
+This is not advisable, especially if it is done often as it may indicate that the specificity has become too complex and needs reductions.
+
+If two declarations have the same specificity, the cascade falls back to the order position/order of appearance.
+
+### Inheritance
+It only cascades down to the children elements. All children elements inherit from their parent elements and may only have a different rendering according to the specificity rules.
+
+The following CSS properties are inheritable:
+
+- azimuth
+- border-collapse
+- border-spacing
+- caption-side
+- color
+- cursor
+- direction
+- empty-cells
+- font-family
+- font-size
+- font-style
+- font-variant
+- font-weight
+- font
+- letter-spacing
+- line-height
+- list-style-image
+- list-style-position
+- list-style-type
+- list-style
+- orphans
+- quotes
+- text-align
+- text-indent
+- text-transform
+- visibility
+- white-space
+- widows
+- word-spacing
+
+In order to control inheritance, there are three keywords that can be used: `inherit`, 
+1. `inherit` can be used to make a child inherit **any property**, even ones that are not inheritable by default. The parent selector must be indicated first, then the child.
+
+```CSS
+strong {
+  font-weight: 900;
+}
+
+.my-component {
+  font-weight: 500;
+}
+
+/* now strong will inherit from my-component */
+.my-component strong {
+  font-weight: inherit;
+}
+
+/* now my-component will inherit from strong */
+strong .my-component  {
+  font-weight: inherit;
+}
+```
+
+2. `initial` rests the element to its default value (all properties have a default value in CSS)
+3. `unset` behaves as `inherit` when the property is inherited by default and `initial` when the property is not inherited by default. it is useful when a reset is needed, but one does not know what the original value is.
