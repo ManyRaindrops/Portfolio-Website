@@ -5,11 +5,11 @@
 <head>
     <!-- metadata -->
     <meta charset="UTF-8">    
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Bertrand Lee">
     <meta name="description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
     <meta name="keywords" content="Bertrand Lee, Portfolio, Computer Science, Machine Learning, AI, RAG, Web Development">
-    <meta http-equiv="content-security-policy" content="default-src https:">
+    <meta http-equiv="content-security-policy" content="default-src 'self' https:; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' https: data:; manifest-src 'self';">
     <meta property="og:title" content="Bertrand - Computer Science Portfolio">
     <meta property="og:description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
     <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ">
@@ -30,76 +30,121 @@
     <!-- translations -->
     <link rel="alternate" href="fr-FR/indice.html" hreflang="fr-FR">
     <link rel="canonical" href="index.html" hreflang="en-US">
+
+    <!-- basic styling -->
+    <style>
+        body {
+          margin: 0; /* Remove default body margin */
+          display: flex;
+          justify-content: center; /* Center horizontally */
+          align-items: center; /* Center vertically */
+          min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+        }
+    
+        .content {
+          text-align: center; /* Center the text inside the container */
+          max-width: 800px; /* Set a maximum width for the text container */
+          width: 100%; /* Ensure it takes up available space up to the max-width */
+          padding: 20px; /* Add some padding for better readability */
+          font-size: 24px; /* Set a fixed font size */
+        }
+    
+        /* Optional: Adjust font size for smaller screens */
+        @media (max-width: 600px) {
+          .content {
+            font-size: 18px; /* Smaller font size for smaller screens */
+          }
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <fieldset>
-            <legend>Navigation</legend>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="notes.html">Notes</a></li>
-                <li><a href="journal.html">Journal</a></li>
-                <li><a href="fr-FR/indice.html">fr-FR</a></li>
-            </ul>
-        </fieldset>
-    </nav>
+    <div class="parent">
+        <header class="section coral">
+            <h3>Scheme</h3>
+            <form id="theme-switcher">
+                <div>
+                    <input checked type="radio" id="auto" name="theme" value="auto">
+                    <label for="auto">Auto</label>
+                </div>
+                <div>
+                    <input type="radio" id="light" name="theme" value="light">
+                    <label for="light">Light</label>
+                </div>
+                <div>
+                    <input type="radio" id="dark" name="theme" value="dark">
+                    <label for="dark">Dark</label>
+                </div>
+            </form>
+        </header>
+        
+        <nav class="right-side section yellow">
+            <fieldset>
+                <legend>Navigation</legend>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./resume.html">Resume</a></li>
+                    <li><a href="./notes.html">Notes</a></li>
+                    <li><a href="./journal.html">Journal</a></li>
+                </ul>
+            </fieldset>
+        </nav>
 
-    <aside id="connections">
-        <fieldset>
-            <legend>Connections</legend>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">LinkedIn</a></li>
-                <!-- add link for my CV-->
-                <!-- add link for the linknet project-->
-                <!-- add link for any pertinent stuff-->
-            </ul>
-        </fieldset>
-        <div id="controls">
-            <div id="movement">
-                <button id="Top" href="#">Move Up</button>
-                <button id="Bottom" href="#">Move Down</button>
-            <div id="ui-look">
-                <button id="switch" alt="light switch" class="light">Mode</button>
+        <aside id="connections" class="left-side section blue">
+            <fieldset>
+                <legend>Connections</legend>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">LinkedIn</a></li>
+                    <!-- add link for my CV-->
+                    <!-- add link for the linknet project-->
+                    <!-- add link for any pertinent stuff-->
+                </ul>
+            </fieldset>
+            <div id="controls">
+                <div id="movement">
+                    <button id="Top">Move Up</button>
+                    <button id="Bottom">Move Down</button>
+                </div>
+                <div id="ui-look">
+                    <button id="switch" alt="light switch" class="light">Mode</button>
+                </div>
             </div>
-        </div>
-    </aside>
+        </aside>
 
-    <main>
-        <section id="aboutme">
-            <img sizes="10x10" src="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ" alt="Bertrand's Picture" class="profile-pic">
-            <h2>About</h2>
-            <p>Aspiring Programmer; aspiring polygot; an aspiring person, but not incomplete.</p>
-        </section>
+        <main class="section green">
+            <section id="aboutme">
+                <!-- img sizes="10x10" src="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ" alt="Bertrand's Picture" class="profile-pic"-->
+                <h2>About</h2>
+                <p>Aspiring Programmer; aspiring polygot; an aspiring person, but not incomplete.</p>
+            </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>RAG from Scratch, Web-Development Journey, and more.</p>
-        </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <p>RAG from Scratch, Web-Development Journey, and more.</p>
+            </section>
 
-        <section id="resume">
-            <h2>Resume</h2>
-            <p>Click to view my CV, updated regularly with Linkden rofile.</p>
-        </section>
+            <section id="resume">
+                <h2>Resume</h2>
+                <p>Click to view my CV, updated regularly with LinkedIn rofile.</p>
+            </section>
 
-        <section id="notes">
-            <h2>Notes</h2>
-            <p>Meta-learning, Programming, and Natural Language</p>
-        </section>
+            <section id="notes">
+                <h2>Notes</h2>
+                <p>Meta-learning, Programming, and Natural Language</p>
+            </section>
 
-        <section id="journal">
-            <h2>Journal</h2>
-            <p>The self-documentation of my progress as I work on this website.</p>
-        </section>
-    </main>
+            <section id="journal">
+                <h2>Journal</h2>
+                <p>The self-documentation of my progress as I work on this website.</p>
+            </section>
+        </main>
 
-    <footer>
-        <p>© 2025 Bertrand Lee</p>
-        <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">Connect with me on LinkedIn!</a>
-    </footer>
-
+        <footer class="section coral">
+            <p>© 2025 Bertrand Lee</p>
+            <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">Connect with me on LinkedIn!</a>
+        </footer>
+    </div>
     <script src="scripts/main.js"></script>
 </body>
 </html>
