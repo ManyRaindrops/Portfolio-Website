@@ -250,7 +250,6 @@ There are three types of elements: replaced, non-replaced, and void elements.
 ```HTML
 <img src="switch.svg" alt="light switch">
 <meta charset="UTF-8">
-
 ```
 
 #### Attributes
@@ -267,11 +266,6 @@ Both tags and attributes have various kinds and values that can be attributed to
 The first is text that should go on an HTML document is a node called the "doctype": `<!DOCTYPE html>`. This ensures that the browser will used the standard interpretative methods to process the HTML file. Other methods are called "quirk modes": https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 
 Every HTML document includes the roote `<html>` element which contains the `<head>` and `<body>` elements. The opening `<html>` tag has the `lang` attribute which defines the main language of the document by language and (optional) region. The `lang` attribute can also identify exceptions to the main language, if there are others present in the document.
-
-```HTML
-<html lang="en">
-<html lang="en-US">
-```
 
 The `<head>` contains vital functionality metadata used by browsers to display the `<body>` correctly. Within `<head>` often include character set, document title, viewport settings, stylesheet links, description, and icons. Here are some of the most important
 1. Character encoding is the `charset` attribute applied to the `<meta>` tag and allows the browser to render the characters of the page correctly. `UTF-8` is the standard input for this field even though the default encoding in most browsers is `windows-1252`.
@@ -421,7 +415,7 @@ myMedia.setAttribute("muted");
 other sections skipped temporarily
 
 #### Web Components
-HTML templates, custon elements, and the shadow DOM comprise the Web Component Standard which enables creation of customizable elements which are self-contained and reusable. It is best practice to name custom elements using lowercase letters only and using a dash to help distinguish the custom from the standard element set.
+HTML templates, custom elements, and the shadow DOM comprise the Web Component Standard which enables creation of customizable elements which are self-contained and reusable. It is best practice to name custom elements using lowercase letters only and using a dash to help distinguish the custom from the standard element set.
 
 The `<template>` element 
 

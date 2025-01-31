@@ -1,60 +1,79 @@
-<!-- This page will change as frequently as I have new journal entries -->
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
     <!-- metadata -->
-    <meta charset="UTF-8">
-    <mmeta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
-    <meta name="author" content="Bertrand Lee">
-    <meta name="description" content="Bertrand Lee's journal documenting his progress in web-development, machine learning, and AI.">
-    <meta name="keywords" content="Bertrand Lee, Journal, Web Development, Machine Learning, AI">
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+        <meta name="author" content="Bertrand Lee">
+    <meta name="description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
+    <meta name="keywords" content="Bertrand Lee, Portfolio, Computer Science, Machine Learning, AI, RAG, Web Development">
     <meta http-equiv="content-security-policy" content="default-src https:">
     <meta property="og:title" content="Bertrand - Computer Science Portfolio">
     <meta property="og:description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
     <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ">
 
     <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="../images/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="../images/android-chrome-512x512.png">
-    <link rel="manifest" href="/site.webmanifest">
-    
-    <!-- other -->
-    <title>Bertrand - Computer Science Portfolio</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./images/android-chrome-512x512.png">
+    <link rel="manifest" href="./images/site.webmanifest">
 
-    
-    <!-- translations -->
-    <link rel="alternate" href="fr-FR/journal.html" hreflang="fr-FR">
-    <link rel="canonical" href="journal.html" hreflang="en-US">
+    <!-- other -->
+    <title>My Journal</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="notes.html">Notes</a></li>
-            <li><a href="journal.html">Journal</a></li>
-            <li><a href="fr-FR/journal.html">fr-FR</a></li>
-        </ul>
+        <fieldset>
+            <legend>Navigation</legend>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./resume.html">Resume</a></li>
+                <li><a href="./notes.html">Notes</a></li>
+                <li><a href="./journal.html">Journal</a></li>
+            </ul>
+        </fieldset>
     </nav>
-    
-    <section id="introduction" class="introduction">
-        <h1>Journal</h1>
-        <p>The self-documentation of my progress as I work on this website.</p>
-    </section>
 
-    <!-- I will be adding more sections after I have learned some more on implementation -->
+    <aside id="connections">
+        <fieldset>
+            <legend>Connections</legend>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">LinkedIn</a></li>
+                <!-- add link for my CV-->
+                <!-- add link for the linknet project-->
+                <!-- add link for any pertinent stuff-->
+            </ul>
+        </fieldset>
+        <div id="controls">
+            <div id="movement">
+                <button id="Top" href="#">Move Up</button>
+                <button id="Bottom" href="#">Move Down</button>
+            <div id="ui-look">
+                <button id="switch" alt="light switch" class="light">Mode</button>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <article>
+            
+        <h1>My Journal</h1>
+        <ul>
+            <li><a href="journal_html/journal_entry_2025-01-30_20-18.html">journal_entry_2025-01-30_20-18</a></li><li><a href="journal_html/journal_entry_2025-01-29_23-19.html">journal_entry_2025-01-29_23-19</a></li><li><a href="journal_html/journal_entry_2025-01-29_08-07.html">journal_entry_2025-01-29_08-07</a></li><li><a href="journal_html/journal_entry_2025-01-28_15-47.html">journal_entry_2025-01-28_15-47</a></li><li><a href="journal_html/journal_entry_2025-01-28_15-41.html">journal_entry_2025-01-28_15-41</a></li>
+        </ul>
+        
+        </article>
+    </main>
 
     <footer>
         <p>© 2025 Bertrand Lee</p>
         <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">Connect with me on LinkedIn!</a>
     </footer>
-
-    <script src="scripts/main.js"></script>
 </body>
 </html>

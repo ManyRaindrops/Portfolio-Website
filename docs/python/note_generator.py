@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 
 # Ensure the "notes" directory exists
-notes_dir = "notes"
+notes_dir = "docs/notes_md"
 os.makedirs(notes_dir, exist_ok=True)
 
 # Get topic title

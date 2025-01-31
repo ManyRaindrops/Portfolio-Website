@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 
 # Ensure the "journal" directory exists
-journal_dir = "journal"
+journal_dir = "docs/journal_md"
 os.makedirs(journal_dir, exist_ok=True)
 
 # Get the journal entry title (optional)

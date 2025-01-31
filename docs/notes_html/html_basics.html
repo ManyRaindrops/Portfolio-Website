@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <!-- metadata -->
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+        <meta name="author" content="Bertrand Lee">
+    <meta name="description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
+    <meta name="keywords" content="Bertrand Lee, Portfolio, Computer Science, Machine Learning, AI, RAG, Web Development">
+    <meta http-equiv="content-security-policy" content="default-src https:">
+    <meta property="og:title" content="Bertrand - Computer Science Portfolio">
+    <meta property="og:description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
+    <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ">
+
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../images/android-chrome-512x512.png">
+    <link rel="manifest" href="../images/site.webmanifest">
+
+    <!-- other -->
+    <title>html_basics.html</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <fieldset>
+            <legend>Navigation</legend>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../resume.html">Resume</a></li>
+                <li><a href="../notes.html">Notes</a></li>
+                <li><a href="../journal.html">Journal</a></li>
+            </ul>
+        </fieldset>
+    </nav>
+
+    <aside id="connections">
+        <fieldset>
+            <legend>Connections</legend>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">LinkedIn</a></li>
+                <!-- add link for my CV-->
+                <!-- add link for the linknet project-->
+                <!-- add link for any pertinent stuff-->
+            </ul>
+        </fieldset>
+        <div id="controls">
+            <div id="movement">
+                <button id="Top" href="#">Move Up</button>
+                <button id="Bottom" href="#">Move Down</button>
+            <div id="ui-look">
+                <button id="switch" alt="light switch" class="light">Mode</button>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <article>
+            <h1>HTML Basics</h1>
+<p><em>Date: 2025-01-28</em></p>
+<h2>TL;DR (Basic)</h2>
+<p>The Hypertext Markup Language (HTML) is a coding language used to define the essential content and layout of a website as if to define a body but without skin, clothes, or a brain. The looks and functionality of a website is primarily taken care of with CSS and JavaScript.</p>
+<h2>Deeper Dive (Intermediate)</h2>
+<ol>
+<li><code>&lt;!DOCTYPE html&gt;</code> declares that the file is HTML5: "Document type"</li>
+<li><code>&lt;html&gt;</code> is the root element that holds the content of the page</li>
+<li><code>&lt;head&gt;</code> contains the neccessary meta-data and links to external files</li>
+<li><code>&lt;body&gt;</code> contains the visible content structure of the page, which is formed by the arrangment of sub-elements within it</li>
+<li><code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> define the corresponding sections of a page</li>
+<li><code>&lt;section&gt;</code> is a general definition for a part of the page that is neither at the very top or bottom</li>
+<li>Content in html files are wrapped (tag-text-tag) with tags like <code>&lt;h1&gt;</code> (headings) or <code>&lt;p&gt;</code> (paragraphs)</li>
+<li><code>&lt;a href="mailto:..."&gt;...&lt;/a&gt;</code> is used for links such as urls or email addresses</li>
+<li><code>&lt;link rel="stylesheet" href="style.css"&gt;</code> links the CSS to the page, allowing for further customization of the appearance of the page</li>
+<li>"href" (for links) and "src" (for images) can be added to tags, these are called attributes.</li>
+<li><code>&lt;script src="main.js"&gt;&lt;/script&gt;</code> links the JavaScript file to the page for interactive purposes such as smooth scrolling</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;My Portfolio&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Welcome to My Portfolio&lt;/h1&gt;
+        &lt;p&gt;Here's a brief introduction about me.&lt;/p&gt;
+    &lt;/header&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;Projects&lt;/h2&gt;
+        &lt;p&gt;Details of my projects will go here.&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;Contact me at: &lt;a href=&quot;mailto:your.email@example.com&quot;&gt;your.email@example.com&lt;/a&gt;&lt;/p&gt;
+    &lt;/footer&gt;
+
+    &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<h2>In-Depth (Advanced)</h2>
+<h3>High-Level Overview</h3>
+<p>Nesting and wrapping are essential techniques used in the formating of HTML code. Nested elements terminate at an identical element that includes an backslash to signify it's purpose as an end marker.</p>
+<pre><code class="language-HTML">&lt;header&gt;
+    &lt;h1&gt;Welcome to My Portfolio&lt;/h1&gt;
+    &lt;p&gt;Here's a brief introduction about me.&lt;/p&gt;
+&lt;/header&gt;
+</code></pre>
+<p>There are 7 main HTML document elements:
+1. <strong>Structural elements</strong> (e.g., <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code> (should only be one per page), <code>&lt;article&gt;</code> (distinct from the page content as independent bit of information), and <code>&lt;aside&gt;</code> (ex. info on a sidebar)).
+2. <strong>Content elements</strong> (e.g. <code>&lt;p&gt;</code> (paragraph), <code>&lt;h1&gt;</code> (header one), <code>&lt;ul&gt;</code> (unordered list), <code>&lt;li&gt;</code> (list element), <code>&lt;a&gt;</code> (link), <code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>)</p>
+<pre><code class="language-HTML">&lt;img src=&quot;image.jpg&quot; alt=&quot;Description of the image&quot;&gt;
+
+&lt;video controls&gt;
+    &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;audio controls&gt;
+    &lt;source src=&quot;audio.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+&lt;/audio&gt;
+
+&lt;form action=&quot;/submit&quot; method=&quot;POST&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;Enter your name&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<ol>
+<li><strong>Meta-data elements</strong>, placed in the <code>&lt;head&gt;</code> section (e.g. <code>&lt;meta&gt;</code> (character encoding, viewport settings, or author name), <code>&lt;link&gt;</code> (links to external resources), <code>&lt;title&gt;</code> (text to appear in the browser's title bar), and <code>&lt;base&gt;</code> (specifies a root URL for all relative URLs in the document) )</li>
+</ol>
+<pre><code class="language-HTML">&lt;title&gt;Bertrand's Portfolio&lt;/title&gt;
+&lt;base href=&quot;https://manyraindrops.github.io/Portfolio-Website/&quot;&gt;
+</code></pre>
+<ol>
+<li><strong>Form elements</strong>, for user interaction (e.g. <code>&lt;input&gt;</code> (ex. text fields, checkboxes, buttons), <code>&lt;textarea&gt;</code> (multi-line text input area), <code>&lt;button&gt;</code>, <code>&lt;select&gt;</code> or <code>&lt;option&gt;</code> (dropdown menu), )</li>
+</ol>
+<pre><code class="language-HTML">&lt;select name=&quot;country&quot;&gt;
+    &lt;option value=&quot;usa&quot;&gt;United States&lt;/option&gt;
+    &lt;option value=&quot;canada&quot;&gt;Canada&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<ol>
+<li>
+<p><strong>Interactive elements</strong>, often used in conjunction with JavaScript (e.g. <code>&lt;details&gt;</code> (collapsible section) or <code>&lt;dialog&gt;</code> (popup box or window),)</p>
+</li>
+<li>
+<p><strong>Style &amp; Script Elements</strong>, embedding CSS or JavaScript in the HTML</p>
+</li>
+</ol>
+<pre><code class="language-HTML">&lt;style&gt;
+    body {
+        background-color: lightblue;
+    }
+&lt;/style&gt;
+
+&lt;script&gt;
+    console.log('Hello, world!');
+&lt;/script&gt;
+</code></pre>
+<ol>
+<li><strong>Embedded content elements</strong>, usually fonts or external media</li>
+</ol>
+<pre><code class="language-HTML">&lt;iframe src=&quot;https://www.youtube.com/embed/example&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+<p>Those elements can be modified by Attributes, which modify the behavior or add information to the element. They are always written with with a value and are always written with the additional text:</p>
+<pre><code class="language-MD">1. id=&quot;about&quot;
+2.  &quot;id=&quot;about&quot;&gt;[*content goes here*]&lt;&quot;
+3. &lt;div id=&quot;about&quot;&gt;[*content goes here*]&lt;/div&gt;
+</code></pre>
+<ol>
+<li>is the name-value pair</li>
+<li>is the name-value pair with the additional text</li>
+<li>is the name-value pair with a marker to show where the content goes</li>
+</ol>
+<p>The following are common attributes:
+1. <code>id</code> gives a unique identity to an element
+2. <code>class</code> gives a collective identity to an element, useful for the purposes of styling or manipulation with JavaScript
+3. <code>src</code> specifices the source of an image or script, usually its directory in the system computer.
+4. <code>href</code> identifies a link, i.e. the destination URL</p>
+<pre><code class="language-HTML">&lt;li&gt;&lt;a href=&quot;journal/index.html&quot;&gt;Journal&lt;/a&gt;&lt;/li&gt;
+</code></pre>
+<ol>
+<li><code>alt</code> identifies a text description for an image (for accessibility)</li>
+</ol>
+<pre><code class="language-HTML">&lt;img src=&quot;logo.png&quot; alt=&quot;Website Logo&quot;&gt;
+</code></pre>
+<ol>
+<li><code>style</code> allows inline CSS styling</li>
+</ol>
+<pre><code class="language-HTML">&lt;div style=&quot;color: red;&quot;&gt;Red text&lt;/div&gt;
+</code></pre>
+<p>Comments are written as such:</p>
+<pre><code class="language-HTML">&lt;!-- This is a comment --&gt;
+</code></pre>
+<p>When a character is to be written that is of the HTML syntax set, an alternative "entity" is used to represent the same symbol such that it can still be used without interfering with the code. The following are examples:
+1. &lt; for &lt;
+2. &gt; for &gt;
+3. &amp; for &amp;
+4. &quot; for "</p>
+<p>Other useful features such as tables, lists (ordered, unordered, definition; numbered, bulleted, and term+definition), HTML5 APIs are also available but not overviewed in this note.</p>
+<p>In addition to being able to present a functional website to the world, the acceibility of the site to those without common levels of sense abilities, such as eyesight, highly benefit from the inclusion of alt text for images, <code>&lt;label&gt;</code> tags for forms, keyboard-navigability (such as using the "tabindex" attribute for custom elements such as divs or spans), ARIA attributes (Accessible Rich Internet Applications), and focus management (ex. when a drop-down menu is selected the first item is focused and a visual indication occurs). With JavaScript, keyboard shortcuts can be made to help with faster navigation.</p>
+<pre><code class="language-HTML">&lt;div tabindex=&quot;0&quot;&gt;This is a custom focusable element&lt;/div&gt;
+
+&lt;button aria-label=&quot;Close&quot; onclick=&quot;closeWindow()&quot;&gt;X&lt;/button&gt;
+</code></pre>
+<p>While the website may be accessible, it must also be searchable through the internet. The process of making it easily searchable is called Search Engine Optimization (SEO). Here are some common practices that improve SEO:
+1. Title tags with relevant keywords</p>
+<pre><code class="language-HTML">&lt;title&gt;Bertrand - Computer Science Portfolio&lt;/title&gt;
+</code></pre>
+<ol>
+<li>Meta descriptions for page content</li>
+</ol>
+<pre><code class="language-HTML">&lt;meta name=&quot;description&quot; content=&quot;Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.&quot;&gt;
+</code></pre>
+<ol>
+<li>Meta keywords for page content</li>
+</ol>
+<pre><code class="language-HTML">&lt;meta name=&quot;keywords&quot; content=&quot;Bertrand Lee, Portfolio, Computer Science, Machine Learning, AI, RAG, Web Development&quot;&gt;
+</code></pre>
+<ol>
+<li>Descriptive header tags</li>
+</ol>
+<pre><code class="language-HTML">&lt;h2&gt;Linknet: RAG from Scratch Project&lt;/h2&gt;
+</code></pre>
+<p>If it is searchable, the webpage code must be interpretable by the browsers of the target audience. HTML verification can done with online tools such as https://validator.w3.org/.</p>
+<p>When a technology is not supported, the webpage should be able to fallback onto simpler technologies that are generally more widespread. For example, if a computer cannot run JavaScript, the webpage should still be viewable and moderately functional. Or, if a video cannot be played, there can be an option to download it.</p>
+<p>While the website may be accessible, it must also be quick to load. Reducing the size of HTML, CSS, and JavaScript code as much as possible, using loss-less compressed images, and loading data-heavy content after the rest helps reduce latency time.</p>
+<h3>Ordered Explanation</h3>
+<h4>DOM</h4>
+<p>HTML utilizes the Document Object Model (DOM) that connects pages with a logical tree in which each branch ends in a node which contains an object, allowing for the tree to be programmatically accessed.</p>
+<h4>Elements</h4>
+<p>This logical order consists of a series of elements which enclose or wrap each other and content parts. Elements are distinguished by tags: opening tag, content, and closing tag.</p>
+<pre><code class="language-HTML">&lt;h1&gt;Learning HTML&lt;/h1&gt;
+</code></pre>
+<h4>Tags</h4>
+<p>The tag name is the content in within the angled brackets, and the element is the totality of the tags and content. Elements can include nested elements, which must follow the same syntax as any other HTML element.</p>
+<pre><code class="language-HTML">&lt;p&gt;This paragraph has some
+  &lt;strong&gt;&lt;em&gt;strongly emphasized&lt;/em&gt;&lt;/strong&gt;
+  content&lt;/p&gt;
+</code></pre>
+<p>Tags are not displayed, but interpreted by the browser as indicators of how the content should be treated. In certain causes, closing tags may be implied by the interpreter if omitted, but it is best practice to ensure syntatical precision.</p>
+<pre><code class="language-HTML">&lt;ul&gt;
+  &lt;li&gt;Blendan Smooth
+  &lt;li&gt;Hoover Sukhdeep
+  &lt;li&gt;Toasty McToastface
+&lt;/ul&gt;
+</code></pre>
+<p>The following goes over what can be safely omitted: https://html.spec.whatwg.org/multipage/syntax.html#syntax-tag-omission. </p>
+<h4>Element Types</h4>
+<p>There are three types of elements: replaced, non-replaced, and void elements.
+1. Replaced elements are those in which the text within the tags is replaced by another media type, such as an image or a video. Those are called objects.</p>
+<pre><code class="language-HTML">&lt;img src=&quot;switch.svg&quot; alt=&quot;light switch&quot;&gt;
+</code></pre>
+<ol>
+<li>Non-replaced elements simply display the text that is within them</li>
+</ol>
+<pre><code class="language-HTML">&lt;p&gt;RAG from Scratch, Web-Development Journey, and more.&lt;/p&gt;
+</code></pre>
+<ol>
+<li>Void tags are represented by a single tag, such as <code>&lt;img&gt;</code>. A slash may be added before the closing angled bracket for clarity.</li>
+</ol>
+<pre><code class="language-HTML">&lt;img src=&quot;switch.svg&quot; alt=&quot;light switch&quot;&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+</code></pre>
+<h4>Attributes</h4>
+<p>These modify elements or provide relevant information and only appear within the opening tag. The opening tag can include zero or more attributes which are separated by spaces. Attributes exist as name-value pairs in which an attribute name is connected to an attribute value by an equals sign, values are enclosed in quotation marks. However, some attributes can be without a value if the value is implied (such as for boolean attributes). Some attributes are universal, while others can only be used with certain tagss.</p>
+<pre><code class="language-HTML">&lt;a href=&quot;#register&quot; target=&quot;_self&quot;&gt;Registration&lt;/a&gt;
+</code></pre>
+<h4>Semantics</h4>
+<p>Both tags and attributes have various kinds and values that can be attributed to them which have literal semantic meaning, helpful for assistive technology and search engines.</p>
+<h4>Structure</h4>
+<p>The first is text that should go on an HTML document is a node called the "doctype": <code>&lt;!DOCTYPE html&gt;</code>. This ensures that the browser will used the standard interpretative methods to process the HTML file. Other methods are called "quirk modes": https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode</p>
+<p>Every HTML document includes the roote <code>&lt;html&gt;</code> element which contains the <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> elements. The opening <code>&lt;html&gt;</code> tag has the <code>lang</code> attribute which defines the main language of the document by language and (optional) region. The <code>lang</code> attribute can also identify exceptions to the main language, if there are others present in the document.</p>
+<p>The <code>&lt;head&gt;</code> contains vital functionality metadata used by browsers to display the <code>&lt;body&gt;</code> correctly. Within <code>&lt;head&gt;</code> often include character set, document title, viewport settings, stylesheet links, description, and icons. Here are some of the most important
+1. Character encoding is the <code>charset</code> attribute applied to the <code>&lt;meta&gt;</code> tag and allows the browser to render the characters of the page correctly. <code>UTF-8</code> is the standard input for this field even though the default encoding in most browsers is <code>windows-1252</code>.
+2. Document titles are distinguished by the unique <code>&lt;title&gt;</code> tag and communicate the designated title of the page.
+3. The <code>viewport</code> meta tag enables the content to be rendered according to the size of the screen avilable and is instantiated by the <code>name</code> attribute combined with the <code>content</code> attribute. The <code>name</code> attribute can be used to instantiate other metadata bits such as author, description, and keywords.
+4. The stylesheet is the CSS file that modifies the appearance of the document. By linking it, it can be applied to that particular HTML document. It is a void element <code>&lt;link&gt;</code> instantited with the <code>rel</code> (relationship) and <code>href</code> (links) attributes. This element can be used to create various relations. 
+5. Rel currently has 25 different values: https://html.spec.whatwg.org/multipage/links.html#linkTypes. Three main values for <code>rel</code> used here will be: stylesheet, icon (for the favicon), alternate (for various translations of the page), and canonical (for the main version of the page). See https://favicon.io/favicon-converter/ for favicons.
+6. <code>&lt;base&gt;</code> is used to identify the default URL for all related links, but it is not used ofen.</p>
+<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en-US&quot;&gt;
+  &lt;head&gt;
+    &lt;!-- metadata --&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;    
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, user-scalable=1&quot;&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;Bertrand Lee&quot;&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.&quot;&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;Bertrand Lee, Portfolio, Computer Science, Machine Learning, AI, RAG, Web Development&quot;&gt;
+
+    &lt;!-- favicons --&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;180x180&quot; href=&quot;../images/apple-touch-icon.png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;../images/favicon.ico&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;192x192&quot; href=&quot;../images/android-chrome-192x192.png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;512x512&quot; href=&quot;../images/android-chrome-512x512.png&quot;&gt;
+    &lt;link rel=&quot;manifest&quot; href=&quot;/site.webmanifest&quot;&gt;
+
+    &lt;!-- other --&gt;
+    &lt;title&gt;Bertrand - Computer Science Portfolio&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/style.css&quot;&gt;
+
+    &lt;!-- translations --&gt;
+    &lt;link rel=&quot;alternate&quot; href=&quot;fr-FR/indice.html&quot; hreflang=&quot;fr-FR&quot;&gt;
+    &lt;link rel=&quot;canonical&quot; href=&quot;index.html&quot; hreflang=&quot;en-US&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4>Scripts</h4>
+<p>Scripts in JavaScript and other languages can be coded into an HTML document using the <code>&lt;script&gt;</code> tag and other languages can be included using the <code>type</code> attributes. These are usually put at the end of a document to ensure that the elements are loaded in before the code is triggered and because the loading stack stops the loading of assets when the script is running. The attributes <code>defer</code> and <code>async</code> reduce the blocking nature of script running and execution.</p>
+<pre><code class="language-HTML">&lt;script&gt;
+  document.getElementById('switch').addEventListener('click', function() {
+    document.body.classList.toggle('black');
+  });
+&lt;/script&gt;
+</code></pre>
+<h4>Metadata</h4>
+<p>The character set declaration and the viewport meta tag are neccessary for every HTML document. They are of the pragma directives and others are of the named type in which the attribute is <code>name</code>. The former describe how the page should be parsed while the later usually adds normal metadata. Both are required to be paired with the <code>content</code> attribute.</p>
+<p><code>http-equiv</code> has several directives (ex.http-equiv="refresh") the most common of which is "refresh," which allows the programmer to build in an automatic refresh, but usually this is not advisable. <code>content-security-policy</code> is the most useful as it defines allowed server origins and script endpoints (this protects against cross-site scripting attacks: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy).</p>
+<pre><code class="language-HTML">&lt;meta http-equiv=&quot;content-security-policy&quot; content=&quot;default-src https:&quot;&gt;
+</code></pre>
+<p><code>name</code> attributes for metadata have a variety of uses, but the most important of which is the <code>description</code> value. For more <code>name</code> values, see here https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name.</p>
+<h4>Open Graph</h4>
+<p>It is a meta tag protocol used to control how links are displayed. Without it, sites will take from the available metadata to construct link previews. It uses the <code>property</code> attribute, which is not officially supported (only widely so), and ensures that attribute values from it won't interfere with <code>name</code> or <code>hhtp-equiv</code> attributes: https://ogp.me/</p>
+<h4>Semantic HTML</h4>
+<p>There are over 100 HTML elements and programmers can create custom elements. Meaning allows programmers and assistive technology to work with HTMl documents with greater ease. The <code>role</code> attribute, a global attribute usable on any element, and can be given any value.</p>
+<pre><code class="language-HTML">&lt;div role=&quot;banner&quot;&gt;
+  &lt;span role=&quot;heading&quot; aria-level=&quot;1&quot;&gt;Three words&lt;/span&gt;
+  &lt;div role=&quot;navigation&quot;&gt;
+    &lt;a&gt;one word&lt;/a&gt;
+    &lt;a&gt;one word&lt;/a&gt;
+    &lt;a&gt;one word&lt;/a&gt;
+    &lt;a&gt;one word&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<ol>
+<li><code>&lt;main&gt;</code> identifies the main content of a page</li>
+<li><code>&lt;aside&gt;</code> identifies tangentially related content</li>
+<li><code>&lt;article&gt;</code> identifies an independent instance of content</li>
+<li><code>&lt;section&gt;</code> identification a part of the main site content</li>
+<li><code>&lt;h1&gt;-&lt;h6&gt;</code> identifies a heading, with heading 1 being the at the top</li>
+<li><code>&lt;header&gt;</code> identifies the upmost content of the site, usually for titles, logos, and naviation</li>
+<li><code>&lt;footers&gt;</code> identifies the bottommost content of the site, usually for contact information and general links</li>
+</ol>
+<h4>Attributes</h4>
+<p>Attributes make HTML powerful, more than any other feature. They are often in name/value pairs placed within the opening tag in order to define behavior, linkages, or functionality of the given element.</p>
+<ol>
+<li><code>Boolean attributes</code> are always true: autofocus, inert, checked, disabled, required, reversed, allowfullscreen, default, loop, autoplay, controls, muted, readonly, multiple, and selected. They will remain true no matter what value is assigned to them. If toggling between true and false, the atrribute should be added or removed rather than toggling any value.</li>
+</ol>
+<pre><code class="language-JavaScript">const myMedia = document.getElementById(&quot;mediaFile&quot;);
+myMedia.removeAttribute(&quot;muted&quot;);
+myMedia.setAttribute(&quot;muted&quot;);
+</code></pre>
+<ol>
+<li><code>id</code> is an attribute that essentially can be used to identify elements by a unique string and can also be used as a landmark for href links.</li>
+</ol>
+<pre><code class="language-HTML">&lt;nav&gt;
+  &lt;a href=&quot;#reg&quot;&gt;Register&lt;/a&gt;
+  &lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;
+  &lt;a href=&quot;#teachers&quot;&gt;Instructors&lt;/a&gt;
+  &lt;a href=&quot;#feedback&quot;&gt;Testimonials&lt;/a&gt;
+&lt;/nav&gt;
+&lt;!-- The link points to the section on the page with that id. --&gt;
+</code></pre>
+<ol>
+<li><code>for</code> is like <code>id</code> and is used with <code>label</code> to literally label objects. Likewise <code>class</code> does the same, except it has no relevance within HTML execept to link elements to CSS and JavaScript actions.</li>
+</ol>
+<pre><code class="language-HTML">&lt;fieldset&gt;
+  &lt;legend&gt;Question 5: Who is an aspiring load balancer?&lt;/legend&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;input type=&quot;radio&quot; name=&quot;q5&quot; value=&quot;blendan&quot; id=&quot;q5blendan&quot;&gt;
+      &lt;label for=&quot;q5blendan&quot;&gt;Blendan Smooth&lt;/label&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;input type=&quot;radio&quot; name=&quot;q5&quot; value=&quot;hoover&quot; id=&quot;q5hoover&quot;&gt;
+      &lt;label for=&quot;q5hoover&quot;&gt;Hoover Sukhdeep&lt;/label&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<ol>
+<li>With <code>data-</code> one can create custom attributes which essentially act as metadata for an element</li>
+</ol>
+<pre><code class="language-HTML">&lt;img
+  class=&quot;spaceship cruiserX3&quot;
+  src=&quot;shipX3.png&quot;
+  data-ship-id=&quot;324&quot;
+  data-weapons=&quot;laserI laserII&quot;
+  data-shields=&quot;72%&quot;
+  data-x=&quot;414354&quot;
+  data-y=&quot;85160&quot;
+  data-z=&quot;31940&quot;
+  onclick=&quot;spaceships[this.dataset.shipId].blasted()&quot; /&gt;
+</code></pre>
+<p>other sections skipped temporarily</p>
+<h4>Web Components</h4>
+<p>HTML templates, custom elements, and the shadow DOM comprise the Web Component Standard which enables creation of customizable elements which are self-contained and reusable. It is best practice to name custom elements using lowercase letters only and using a dash to help distinguish the custom from the standard element set.</p>
+<p>The <code>&lt;template&gt;</code> element </p>
+<p>Due to the involvement of JavaScript and CSS further development of this set of notes will not continue for now.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 Bertrand Lee</p>
+        <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">Connect with me on LinkedIn!</a>
+    </footer>
+</body>
+</html>

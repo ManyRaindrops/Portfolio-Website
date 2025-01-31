@@ -5,7 +5,7 @@
 <head>
     <!-- metadata -->
     <meta charset="UTF-8">
-    <mmeta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
     <meta name="author" content="Bertrand Lee">
     <meta name="description" content="RAG from Scratch, Web-Development Journey, and more.">
     <meta name="keywords" content="Bertrand Lee, Journal, Web Development, Machine Learning, AI">
@@ -15,16 +15,17 @@
     <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ">
 
     <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="../images/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="../images/android-chrome-512x512.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+    <link rel="manifest" href="images/site.webmanifest">
     
     <!-- other -->
     <title>Bertrand - Computer Science Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
-
     
     <!-- translations -->
     <link rel="alternate" href="fr-FR/qui_suis-je.html" hreflang="fr-FR">
@@ -32,23 +33,60 @@
 </head>
 <body>
     <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="notes.html">Notes</a></li>
-            <li><a href="journal.html">Journal</a></li>
-            <li><a href="fr-FR/projets.html">fr-FR</a></li>
-        </ul>
+        <fieldset>
+            <legend>Navigation</legend>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="fr-FR/projets.html">fr-FR</a></li>
+            </ul>
+        </fieldset>
     </nav>
-    
-    <section id="introduction" class="introduction">
-        <h1>Projects</h1>
-        <p>RAG from Scratch, Web-Development Journey, and more.</p>
-    </section>
 
-    <!-- I will be adding more sections after I have learned some more on implementation -->
+    <aside id="connections">
+        <fieldset>
+            <legend>Connections</legend>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">LinkedIn</a></li>
+                <!-- add link for my CV-->
+                <!-- add link for the linknet project-->
+                <!-- add link for any pertinent stuff-->
+            </ul>
+        </fieldset>
+        <div id="controls">
+            <div id="movement">
+                <button id="Top" href="#">Move Up</button>
+                <button id="Bottom" href="#">Move Down</button>
+            <div id="ui-look">
+                <button id="switch" alt="light switch" class="light">Mode</button>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <!-- The following sectiosn will have links to the corresponding pages, somehow somewhere-->
+        <section id="rag-from-scratch" class="project">
+            <h2>RAG from Scratch</h2>
+            <p>I built a Retrieval-Augmented Generator (RAG) from scratch to explore the intricacies of machine learning and AI. I first made it in plain Python and then I used PyTorch as much as I could. It is meant to be a precursor for my other projects which I plan to start in the future.</p>
+            <a href="rag-from-scratch.html">Read more</a>
+        </section>
+
+        <section id="tins" class="project">
+            <h2>TINS</h2>
+            <p>TINS is a project focused on developing a novel system for intelligent crowd-managing solutions for everyday people, leveraging advanced algorithms and data structures. It is meant to allow the everday person to know where and when a place is crowded on the basis of real-time data and data-driven predictions</p>
+            <a href="tins.html">Read more</a>
+        </section>
+
+        <section id="web-development-journey" class="project">
+            <h2>Web-Development Journey</h2>
+            <p>This section documents the summary of my journey through web development. All of my notes and journal entries for this project are listed on this site <a href="journal.html">here</a>. The other sites I have made are listed on the project file.
+            <a href="web-development-journey.html">Read more</a>
+        </section>
+    </main>
 
     <footer>
         <p>© 2025 Bertrand Lee</p>
