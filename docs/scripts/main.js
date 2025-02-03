@@ -5,6 +5,7 @@ const navActions = {
   resumeButton: './resume.html',
   notesButton: './notes.html',
   journalButton: './journal.html',
+  blogButton: './blog.html', // Added blogButton
   githubButton: 'https://github.com/ManyRaindrops',
   linkedinButton: 'https://www.linkedin.com/in/bertrand-lee-76624b322/'
 };

@@ -1,0 +1,140 @@
+A problem-solving technical professional passionate about bridging gaps between complex systems and clear communication. With expertise in Python automation and data analysis, I thrive on mastering new tools—from DevOps pipelines to machine learning frameworks—and explaining them in approachable ways. My projects include optimizing CI/CD workflows (cutting deployment times by 40%) and building interactive data visualizations for healthcare analytics. I’m driven by curiosity and collaboration, whether refining code or mentoring peers. Let’s connect to discuss how I can contribute to your team—explore my projects on GitHub or reach out via email."
+
+
+Here’s a streamlined plan to address your questions and finalize your portfolio structure:
+
+---
+
+### **Maintenance**
+**1. Prioritize Desktop and Mobile**  
+- Test your site on **Chrome DevTools (Device Mode)** and real devices (e.g., iPhone, Android).  
+- Use CSS frameworks like **Tailwind** or **Bootstrap** for responsive grids, or stick with flexbox/grid for custom layouts.  
+- Simplify navigation menus for mobile (e.g., hamburger menu).  
+
+---
+
+### **Sections to Add**
+**1. "Highlights" Section**  
+   - **Option 1:** Integrate into your About/Bio as bullet points or a "Key Achievements" subsection.  
+   - **Option 2:** Create a standalone section with 3–4 standout items (e.g., "Reduced deployment latency by 30%," "Led cross-functional team on X project").  
+   - *Example structure:*  
+     - Metric-driven results  
+     - Awards/certifications  
+     - Major collaborations  
+
+**2. Blog**  
+   - Use tags/categories (e.g., Python, DevOps) instead of rigid skill levels.  
+   - Include short tutorials, project retrospectives, or insights from learning new tools.  
+   - Host with a static site generator like **Jekyll** (integrates with GitHub Pages) or **Hugo**.  
+
+**3. Contacts**  
+   - Dedicate a page (or footer section) with:  
+     - Email + social links  
+     - Contact form (use **Formspree** or **Netlify Forms** for free backend)  
+     - Optional: Calendly link for scheduling calls  
+
+---
+
+### **Features to Add**  
+**1. Accessibility**  
+   - **Alt text:** Describe images functionally (e.g., "Screenshot of CI/CD pipeline optimization dashboard").  
+   - **Color contrast:** Test with **WebAIM Contrast Checker**.  
+   - **ARIA labels:** Add to buttons/icons (e.g., `aria-label="Download resume"`).  
+
+**2. Subtle Interactivity**  
+   - Hover effects on project cards (e.g., subtle shadow/lift).  
+   - Smooth scroll for anchor links.  
+   - *Avoid:* Auto-playing animations or parallax that slows performance.  
+
+**3. Analytics**  
+   - **Google Analytics (GA4):** Free but complex.  
+   - **Plausible:** Privacy-focused, lightweight alternative (paid).  
+
+**4. Global Search**  
+   - For static sites, use **Algolia DocSearch** (free for open-source) or **Lunr.js** (self-hosted).  
+   - Tag posts/projects to enable filtering (e.g., "Python," "Automation").  
+
+---
+
+### **Improvements**  
+**1. Faster Loading**  
+   - Compress images with **Squoosh** or **ImageOptim**.  
+   - Lazy-load images/videos.  
+   - Use a CDN like **Cloudflare** (free tier works with GitHub Pages).  
+
+**2. Custom Domain**  
+   - Buy a domain via **Namecheap** or **Google Domains**.  
+   - Follow GitHub Pages’ [custom domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).  
+
+---
+
+### **Content to Add**  
+**1. Quick-Glance Bio**  
+   - *Example:*  
+     > "Technical problem-solver passionate about automating workflows and demystifying complex systems. Specializing in Python scripting and DevOps, I’ve built tools that reduced deployment errors by 25% and mentored teams on Agile best practices. Let’s connect to streamline your next project—explore my work on [GitHub](#) or reach out via [email](#)."  
+
+**2. Testimonials/Collaborations**  
+   - Add a carousel or sidebar quotes (e.g., "Jane, Team Lead: *‘[Name]’s documentation saved us 10 hours/month!’*").  
+
+---
+
+### **Should You Add a Hobbies Section?**  
+**Pros:**  
+- Humanizes you (e.g., "Avid rock climber and open-source contributor").  
+- Shows soft skills (eobbies like mentoring, writing, or volunteering).  
+
+**Cons:**  
+- Irrelevant if unrelated to your professional brand (e.g., "I love Netflix").  
+- Takes space from core content.  
+
+**Compromise:**  
+- Add 1–2 lines in your About/Bio (e.g., "When not coding, I write about productivity hacks or hike trails with my dog").  
+- Only create a standalone section if hobbies tie to your work (e.g., "Building Raspberry Pi retro gaming consoles" for hardware/embedded roles).  
+
+---
+
+### **Final Structure Recommendation**  
+1. **Home:** Quick-glance bio + highlights.  
+2. **Projects:** Case studies with metrics.  
+3. **Blog:** Tagged posts.  
+4. **Resume:** Downloadable PDF + key skills.  
+5. **Contact:** Form + links.  
+6. **(Optional) About:** Extended bio + hobbies *if they add value*.  
+
+Focus on **quality over quantity**—your portfolio is a living document, so start lean and iterate!
+
+
+
+
+
+
+
+
+
+
+
+
+<p>This project is a simple portfolio website for showcasing personal work and projects. It is built using HTML, CSS, and JavaScript. All documentation of the process of learning how to build this website has been recorded.</p>
+            
+                <h2>Goals of this project:</h2>
+                <ol>
+                    <li>Become familiar with HTML, CSS, JavaScript, related libraries/frameworks (Bulma and Bootstrap), Github, Git, Github pages, VS Code, and using AI as a tool rather than a human-replacement.</li>
+                    <li>Create a personal website, which I can use to help me create other sites that I may wish to make in the future.</li>
+                    <li>Demonstrate my ability to learn quickly (start: 1/28/2025 ; end: 2/2/2025 ; irregular work schedule due to school)</li>
+                </ol>
+            
+                <h2>The use of AI in this project:</h2>
+                <ol>
+                    <li>Explaining new/hard concepts: very useful for quickly getting a response rather than having to search through general coding websites.</li>
+                    <li>Writing helpful comments: especially useful for the learning process, when not all points are in memory or fully understood. Comments by AI are labeled: "AI-made"</li>
+                    <li>Repetitive tasks: using AI to replicate features of index.html to the other pages, auto generate skeleton HTML elements (such as article sections)</li>
+                    <li>Generating Python scipts: used for automating and templating of journal and note entries; the focus of this project is on webdevelopment</li>
+                    <li>Writing temporary example code: helpful in the learning process to see relevant examples. Such AI generated code was removed or indicated as such</li>
+                </ol>
+            
+                <h2>Resources used:</h2>
+                <ul>
+                    <li>https://web.dev/learn</li>
+                    <li>Leading LLMs (free plan): GPT 4o, Gemini, and DeepSeek</li>
+                    <li>Copilot feature (free plan): for usages, see above</li>
+                </ul></p>
