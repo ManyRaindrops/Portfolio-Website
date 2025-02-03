@@ -288,7 +288,7 @@ img {
 
 main {
   padding: 1rem;
-  min-height: 80vh;
+  min-height: 60vh;
 }
 
 /* the footer has been designated to generally look a certain way regardless of the theme. */
@@ -299,6 +299,9 @@ footer {
   padding: 1rem;
   min-height: 100px;
   margin-top: auto;
+  width: 100%;
+  position: relative;
+  bottom: 0;
 }
 
 /* This organizes the links that are in the footer, and allows me to easily add more. */
