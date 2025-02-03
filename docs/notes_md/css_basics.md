@@ -468,3 +468,64 @@ strong .my-component  {
 
 2. `initial` rests the element to its default value (all properties have a default value in CSS)
 3. `unset` behaves as `inherit` when the property is inherited by default and `initial` when the property is not inherited by default. it is useful when a reset is needed, but one does not know what the original value is.
+
+see also https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Types
+
+### Color
+Numerically defined colors include hex, RGB, or HSL.
+1. `hex` can have a transperency using an alpha value, which are two digits at the end of the 6 digit hex code. These codes can also be written in shorthand by representing two digits with one: #b5s is identical to #bb55ss. To add alpha, then #bb55ss33 would expand to #bb55ss33.
+2. `RGB` uses three numbers to identify the among of red, green, and blue that should be in the final output color (values 0-255). The lower the number the less of that color is added in. The alpha can be set in either of the following ways: rgb(0 0 0/ 50%), rgb(0 0 0 / 0.5), rgba(0, 0, 0, 50%), or rgba(0, 0, 0, 0.5). `rgba` has wider support. 
+3. `HSL` uses hue, saturation, or lightness with hue being the color as designated by 0-360 (as in on a color wheel), and saturation (0% will make it grayscale) and lightness (100% gives a white color) being represented by respective percentages. Alpha is defined in `hsl` in the same was as `rgb` with the modded `hsl()` function or the use of the `hsla()` function.
+
+In addition to these number values, there are 148 named CSS colors: https://developer.mozilla.org/en-US/docs/Web/CSS/named-color (see also https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#color_keywords and https://almanac.httparchive.org/en/2019/css).
+
+These are some keywords: transparent (completely invinsible), color, text-shadow, text-decoration-color, background, linear-gradient, border-color, and outline-color. see also https://css-tricks.com/nerds-guide-color-web/
+
+### Sizing Units
+1. **Relative lengths: `ch` is the size of a single `0`, hence `ch` is a relative unit. `vw` is the width of the browser window.
+
+```txt
+Unit  Relative to:
+
+Font-size-relative units
+
+em  Relative to the font size, i.e. 1.5em will be 50% larger than the base computed font size of its parent. (Historically, the height of the capital letter "M").
+ex	Heuristic to determine whether to use the x-height, a letter "x", or `.5em` in the current computed font size of the element.
+cap	Height of the capital letters in the current computed font size of the element.
+ch	Average character advance of a narrow glyph in the element's font (represented by the "0" glyph).
+ic	Average character advance of a full width glyph in the element's font, as represented by the "水" (CJK water ideograph, U+6C34) glyph.
+rem	Font size of the root element (default is 16px).
+lh	Line height of the element.
+rlh	Line height of the root element.
+
+Viewport-relative units
+
+vw	1% of viewport's width. People use this unit to do cool font tricks, like resizing a header font based on the width of the page so as the user resizes, the font will also resize.
+vh	1% of viewport's height. You can use this to arrange items in a UI, if you have a footer toolbar for example.
+vi	1% of viewport's size in the root element's inline axis. Axis refers to writing modes. In horizontal writing modes like English, the inline axis is horizontal. In vertical writing modes like some Japanese typefaces, the inline axis runs top to bottom.
+vb	1% of viewport's size in the root element's block axis. For the block axis, this would be the directionality of the language. LTR languages like English would have a vertical block axis, since English language readers parse the page from top to bottom. A vertical writing mode has a horizontal block axis.
+vmin	1% of the viewport's smaller dimension.
+vmax	1% of the viewport's larger dimension.
+```
+
+2. numbers can come in the form of integers and decimals (0.1 or .1) and 1 usually represents 100%
+3. absolute lengths should represent real lenghts (ex. 2cm can be measurred on a screen as really being 2cm)
+
+```txt
+Unit	Name	                  Equivalent to
+cm  	Centimeters	            1cm = 96px/2.54
+mm  	Millimeters	            1mm = 1/10th of 1cm
+Q	    Quarter-millimeters	    1Q = 1/40th of 1cm
+in    Inches	                1in = 2.54cm = 96px
+pc    Picas	                  1pc = 1/6th of 1in
+pt	  Points	                1pt = 1/72th of 1in
+px	  Pixels	                1px = 1/96th of 1in
+```
+
+4. There are also angle units such as `deg` (degree) and `rad` (radian) or `dpi` (dots per int, useful for retina displays / high resolution displays)
+
+see also https://developer.mozilla.org/docs/Learn/CSS/Building_blocks/Values_and_units
+
+### Layout
+view https://www.csszengarden.com/
+

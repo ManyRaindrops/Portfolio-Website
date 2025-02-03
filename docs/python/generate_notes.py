@@ -14,16 +14,16 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <html lang="en-US">
 <head>
     <!-- metadata -->
-    <meta charset="UTF-8">    
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
-        <meta name="author" content="Bertrand Lee">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Bertrand Lee">
     <meta name="description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
     <meta name="keywords" content="Bertrand Lee, Portfolio, Computer Science, Machine Learning, AI, RAG, Web Development">
-    <meta http-equiv="content-security-policy" content="default-src https:">
     <meta property="og:title" content="Bertrand - Computer Science Portfolio">
     <meta property="og:description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
     <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ">
-
+    <meta http-equiv="content-security-policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' https: data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; frame-src 'self';">
+    
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{base_path}/images/apple-touch-icon.png">
     <link rel="icon" type="image/x-icon" href="{base_path}/images/favicon.ico">
@@ -31,57 +31,63 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <link rel="icon" type="image/png" sizes="32x32" href="{base_path}/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="{base_path}/images/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="{base_path}/images/android-chrome-512x512.png">
-    <link rel="manifest" href="{base_path}/images/site.webmanifest">
 
     <!-- other -->
     <title>{title}</title>
     <link rel="stylesheet" href="{base_path}/styles/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <fieldset>
-            <legend>Navigation</legend>
-            <ul>
-                <li><a href="{base_path}/index.html">Home</a></li>
-                <li><a href="{base_path}/about.html">About</a></li>
-                <li><a href="{base_path}/projects.html">Projects</a></li>
-                <li><a href="{base_path}/resume.html">Resume</a></li>
-                <li><a href="{base_path}/notes.html">Notes</a></li>
-                <li><a href="{base_path}/journal.html">Journal</a></li>
-            </ul>
-        </fieldset>
-    </nav>
-
-    <aside id="connections">
-        <fieldset>
-            <legend>Connections</legend>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">LinkedIn</a></li>
-                <!-- add link for my CV-->
-                <!-- add link for the linknet project-->
-                <!-- add link for any pertinent stuff-->
-            </ul>
-        </fieldset>
-        <div id="controls">
-            <div id="movement">
-                <button id="Top" href="#">Move Up</button>
-                <button id="Bottom" href="#">Move Down</button>
-            <div id="ui-look">
-                <button id="switch" alt="light switch" class="light">Mode</button>
-            </div>
+    <header>
+        <h1 class="title">Bertrand's Portfolio</h1>
+        <button class="gen-nav-menu">☰</button>
+        <div class="header-links">
+            <button class="general-button" id="homeButton">Home</button>
+            <button class="general-button" id="aboutButton">About</button>
+            <button class="general-button" id="projectsButton">Projects</button>
+            <button class="general-button" id="resumeButton">Resume</button>
+            <button class="general-button" id="notesButton">Notes</button>
+            <button class="general-button" id="journalButton">Journal</button>
         </div>
-    </aside>
+    </header>
+    <div class="container">
+        <aside class="right-side card">
+            <img src="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ" alt="Card Image" loading="lazy">
+            <div class="card-content">
+                <h2>Contact</h2>
+                <button id="linkedinButton">LinkedIn</button>
+                <button id="githubButton">GitHub</button>
+            </div>
+        </aside>
+    
+        <main>
+            <article>
+                {content}
+            </article>
+        </main>
 
-    <main>
-        <article>
-            {content}
-        </article>
-    </main>
-
+        <nav class="left-side card">
+            <div id="theme-selector">
+                <button type="button" id="themesButton">Themes</button>
+                <div class="dropdown">
+                    <button type="button" id="auto" name="theme" value="auto">Auto</button>
+                    <button type="button" id="dark" name="theme" value="dark">Dark</button>
+                    <button type="button" id="light" name="theme" value="light">Light</button>
+                    <button type="button" id="grayscale" name="theme" value="grayscale">Grayscale</button>
+                    <button type="button" id="shadow" name="theme" value="shadow">Shadow</button>
+                    <p id="spacer-text">-</p>
+                </div>
+            </div>
+        </nav>
+    </div>
     <footer>
         <p>© 2025 Bertrand Lee</p>
-        <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">Connect with me on LinkedIn!</a>
+        <div id="footer-links">
+            <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">Connect with me on LinkedIn!</a>
+            <a href="{base_path}/about.html#backgrounds" target="_blank">Backgrounds</a>
+            <a href="https://github.com/ManyRaindrops" target="_blank">Check out my GitHub!</a>
+        </div>
     </footer>
+    <script src="{base_path}/scripts/main.js"></script>
 </body>
 </html>"""
 
@@ -125,16 +131,18 @@ def update_index_page(md_dir, html_dir, index_file, title, base_path):
         print(f"Error listing files in {md_dir}: {e}")
         return
 
-    links = [f'<li><a href="{os.path.basename(html_dir)}/{os.path.splitext(f)[0]}.html">{os.path.splitext(f)[0]}</a></li>' 
-             for f in md_files if f.endswith(".md")]
+    # Generate links with consistent indentation
+    links = []
+    for f in md_files:
+        if f.endswith(".md"):
+            links.append(f'            <a class="button" href="{os.path.basename(html_dir)}/{os.path.splitext(f)[0]}.html">{os.path.splitext(f)[0]}</a>\n')
     
     index_content = HTML_TEMPLATE.format(
         title=title,
         content=f"""
         <h1>{title}</h1>
         <ul>
-            {''.join(links)}
-        </ul>
+{''.join(links)}        </ul>
         """,
         base_path=base_path
     )

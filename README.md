@@ -3,7 +3,7 @@
 This project is a simple portfolio website for showcasing personal work and projects. It is built using HTML, CSS, and JavaScript. All documentation of the process of learning how to build this website has been recorded.
 
 Goals of this project:
-1. Become familiar with HTML, CSS, JavaScript, related libraries/frameworks (Bulma, Bootstrap, Foundation, and Materialize), Github, Git, Github pages, VS Code, and using AI as a tool rather than a human-replacement.
+1. Become familiar with HTML, CSS, JavaScript, related libraries/frameworks (Bulma and Bootstrap), Github, Git, Github pages, VS Code, and using AI as a tool rather than a human-replacement.
 2. Create a personal website, which I can use to help me create other sites that I may wish to make in the future.
 3. Demonstrate my ability to learn quickly (start: 1/28/2025 ; end: 2/2/2025 ; irregular work schedule due to school)
 

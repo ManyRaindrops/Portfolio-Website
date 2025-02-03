@@ -2,16 +2,16 @@
 <html lang="en-US">
 <head>
     <!-- metadata -->
-    <meta charset="UTF-8">    
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
-        <meta name="author" content="Bertrand Lee">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Bertrand Lee">
     <meta name="description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
     <meta name="keywords" content="Bertrand Lee, Portfolio, Computer Science, Machine Learning, AI, RAG, Web Development">
-    <meta http-equiv="content-security-policy" content="default-src https:">
     <meta property="og:title" content="Bertrand - Computer Science Portfolio">
     <meta property="og:description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
     <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ">
-
+    <meta http-equiv="content-security-policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' https: data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; frame-src 'self';">
+    
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
@@ -19,63 +19,491 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../images/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="../images/android-chrome-512x512.png">
-    <link rel="manifest" href="../images/site.webmanifest">
 
     <!-- other -->
     <title>css_basics.html</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <fieldset>
-            <legend>Navigation</legend>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../projects.html">Projects</a></li>
-                <li><a href="../resume.html">Resume</a></li>
-                <li><a href="../notes.html">Notes</a></li>
-                <li><a href="../journal.html">Journal</a></li>
-            </ul>
-        </fieldset>
-    </nav>
-
-    <aside id="connections">
-        <fieldset>
-            <legend>Connections</legend>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">LinkedIn</a></li>
-                <!-- add link for my CV-->
-                <!-- add link for the linknet project-->
-                <!-- add link for any pertinent stuff-->
-            </ul>
-        </fieldset>
-        <div id="controls">
-            <div id="movement">
-                <button id="Top" href="#">Move Up</button>
-                <button id="Bottom" href="#">Move Down</button>
-            <div id="ui-look">
-                <button id="switch" alt="light switch" class="light">Mode</button>
-            </div>
+    <header>
+        <h1 class="title">Bertrand's Portfolio</h1>
+        <button class="gen-nav-menu">☰</button>
+        <div class="header-links">
+            <button class="general-button" id="homeButton">Home</button>
+            <button class="general-button" id="aboutButton">About</button>
+            <button class="general-button" id="projectsButton">Projects</button>
+            <button class="general-button" id="resumeButton">Resume</button>
+            <button class="general-button" id="notesButton">Notes</button>
+            <button class="general-button" id="journalButton">Journal</button>
         </div>
-    </aside>
-
-    <main>
-        <article>
-            <h1>CSS Basics</h1>
+    </header>
+    <div class="container">
+        <aside class="right-side card">
+            <img src="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ" alt="Card Image" loading="lazy">
+            <div class="card-content">
+                <h2>Contact</h2>
+                <button id="linkedinButton">LinkedIn</button>
+                <button id="githubButton">GitHub</button>
+            </div>
+        </aside>
+    
+        <main>
+            <article>
+                <h1>CSS Basics</h1>
 <p><em>Date: 2025-01-30</em></p>
 <h2>TL;DR (Basic)</h2>
 <p>[One-sentence explanation]</p>
 <h2>Deeper Dive (Intermediate)</h2>
-<p>[Key concepts, examples, and explanations]</p>
+<p>Box Model
+Because everything CSS displays is a box, understanding how the CSS Box Model works is a core foundation of CSS.</p>
+<p>Selectors
+To apply CSS to an element, you need to select it. CSS gives you a number of different ways to do this, and you can explore them in this module.</p>
+<p>The cascade
+Sometimes two or more competing CSS rules can apply to an element. Find out how the browser chooses which to use, and how to control this selection.</p>
+<p>Specificity
+This module takes a deeper look at specificity, a key part of the cascade.</p>
+<p>Inheritance
+Some CSS properties inherit if you don't specify a value for them. Find out how this works and how to use it to your advantage in this module.</p>
+<p>Color
+There are several different ways to specify color in CSS. This module examines the most commonly used color values.</p>
+<p>Sizing Units
+Find out how to size elements using CSS, working with the flexible medium of the web.</p>
+<p>Layout
+An overview of the various layout methods you have to choose from when building a component or page layout.</p>
+<p>Flexbox
+Flexbox is a layout mechanism designed for laying out groups of items in one dimension. Learn how to use it in this module.</p>
+<p>Grid
+CSS Grid Layout provides a two dimensional layout system, controlling layout in rows and columns. Discover everything the grid has to offer.</p>
+<p>Logical Properties
+Logical, flow-relative properties and values are linked to the flow of text, not the physical shape of the screen. Learn how to take advantage of this newer approach to CSS.</p>
+<p>Spacing
+Find out how to select the best method of spacing elements for the layout method you're using and the component you're building.</p>
+<p>Pseudo-elements
+A pseudo-element is like adding or targeting an extra element without having to add more HTML. They have a variety of roles, and you can learn about them in this module.</p>
+<p>Pseudo-classes
+Pseudo-classes let you apply CSS based on state changes. This means your design can react to user input, such as an invalid email address.</p>
+<p>Borders
+A border provides a frame for your boxes. Find out how to change the size, style, and color of borders using CSS.</p>
+<p>Shadows
+There are a number of ways to add shadows to text and elements in CSS. Learn how to use each option, and the tasks they were designed for.</p>
+<p>Focus
+Understand the importance of focus in your web applications. You'll learn how to manage focus, and how to make sure the path through your page works for both people using a mouse and people using the keyboard to navigate.</p>
+<p>Z-index and stacking contexts
+Find out how to control the order in which elements layer on top of each other by using z-index and the stacking context.</p>
+<p>Functions
+CSS has a range of inbuilt functions. Learn about some of the key functions and how to use them.</p>
+<p>Gradients
+In this module, you'll find out how to use the various types of gradients available in CSS. Gradients can create a whole host of useful effects, without the need for graphics apps to create images.</p>
+<p>Animations
+Animation is a great way to highlight interactive elements, and add interest and fun to your designs. Find out how to add and control animation effects with CSS.</p>
+<p>Filters
+Filters in CSS mean you can apply effects you might only think were possible in a graphics application. In this module, you can discover what is available.</p>
+<p>Blend Modes
+Create compositional effects by mixing two or more layers, and learn how to isolate an image with a white background in this module on blend modes.</p>
+<p>Lists
+A list, structurally, is composed of a list container element filled with list items. In this module, you'll learn how to style all the parts of a list.</p>
+<p>Transitions
+Learn how to define transitions between states of an element. Use transitions to improve user experience by providing visual feedback for user interaction.</p>
+<p>Overflow
+Overflow is how you deal with content that doesn't fit in a set parent size. In this module, you'll think outside the box and learn how to style overflowing content.</p>
+<p>Backgrounds
+Learn how to style boxes' backgrounds using CSS.</p>
+<p>Text and typography
+Learn how to style text on the web.</p>
 <h2>In-Depth (Advanced)</h2>
-<p>[Technical details, real-world applications, code snippets]</p>
-        </article>
-    </main>
+<h3>The Box Model</h3>
+<p>The box model represents all displayed information in the context of boxes, even representations that are not boxes. Their behavior is controled by their display value, which is controlled by extrinsic sizing (static, defined by user) or instrinsic sizing (dynamic, can be undeclared or declared in code).</p>
+<p>Every box has four specific areas for specific jobs:
+1. The contet box houses the specific information wished to be displayed (text, images, videos, etc.) and can usually control the size of the parent box (the other boxes). It is the center-most box.
+2. The padding box essentially is open, transparent space between the content box and the border box. If overflow rules are set those box objects are placed in this space (<code>overflow: auto</code> or <code>overflow: scroll</code>)
+3. The border box is a border defined by the <code>border</code> value and it represents the end of the css element and the beginning of what is not it.
+4. The margin box is the open, transparent space around a box and is essentially like the padding box.</p>
+<p>In order to make the size of the element defined by the outermost rendered area, rather than the content-box, the following can be used:</p>
+<pre><code class="language-CSS">.my-box {
+  box-sizing: border-box;
+    width: 200px;
+    border: 10px solid;
+    padding: 20px;
+}
+</code></pre>
+<p>The following applies <code>box-sizing</code> to all elements.</p>
+<pre><code class="language-CSS">*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+</code></pre>
+<h3>Selectors</h3>
+<p>A selector is comprised of a name and a CSS rule:</p>
+<pre><code class="language-CSS">.my-see-rule {
+    backgorund: red;
+    color: beige;
+    font-size: 1.2rem;
+}
+
+</code></pre>
+<p>Before the semicolon is the declaracion, which is given a property name. After the semicolon is a value for that property. The selector is the text between the period and the curly brackets. A simple selector modifies HTMl elements.
+1. Universal selector can modify any element</p>
+<pre><code class="language-CSS">/* the universal selector uses the star symbol to mark it */
+
+* {
+  color: hotpink;
+}
+</code></pre>
+<ol>
+<li>Type selector modifies a specific HTML such as <code>&lt;section&gt;</code></li>
+</ol>
+<pre><code class="language-CSS">section {
+  padding: 2em;
+}
+</code></pre>
+<ol>
+<li>Class selector modifies elements with a specific class defined by the user. The <code>.</code> identifies that an attribute is being addressed.</li>
+</ol>
+<pre><code class="language-HTML">&lt;div class=&quot;my-class&quot;&gt;&lt;/div&gt;
+&lt;button class=&quot;my-class&quot;&gt;&lt;/button&gt;
+&lt;p class=&quot;my-class&quot;&gt;&lt;/p&gt;
+</code></pre>
+<pre><code class="language-CSS">.my-class {
+  color: red;
+}
+</code></pre>
+<ol>
+<li>
+<p>ID selector works the same as the class selector, but uses <code>#</code> as the marker instead of <code>.</code></p>
+</li>
+<li>
+<p>The Attribute selector works the same, except that an attribute and it's value (optional) is declared within square brackets. The value can be case-sensitive (s) or case insensitive (i). Other modifications can be made with syntax shown below</p>
+</li>
+</ol>
+<pre><code class="language-CSS">[data-type='primary'] {
+  color: red;
+}
+
+[data-type] {
+  color: red;
+}
+
+/* A href that contains &quot;example.com&quot; */
+[href*='example.com'] {
+  color: red;
+}
+
+/* A href that starts with https */
+[href^='https'] {
+  color: green;
+}
+
+/* A href that ends with .com */
+[href$='.com'] {
+  color: blue;
+}
+</code></pre>
+<p>Multiple selectors can be groups together under a single CSS rule via comma separation:</p>
+<pre><code class="language-CSS">strong,
+em,
+.my-class,
+[lang] {
+  color: red;
+}
+</code></pre>
+<blockquote>
+<p>see also pseudo-classes and pseudo-elements</p>
+</blockquote>
+<p>There is a set of <strong>complex selectors</strong> used for greater specificity and reduction of redundancy (applications can only cascade down, see the "cascading" section):
+1. Combinator are bind a parent and child class, but not a child to its parent class. A child class is essentially an element that is within an encapsulating element.</p>
+<pre><code class="language-HTML">&lt;p&gt;A paragraph of text with some &lt;strong&gt;bold text for emphasis&lt;/strong&gt;.&lt;/p&gt;
+</code></pre>
+<p>The <strong>descendant combinator</strong> is a space and applies the style of the parent to and child (direct or simply within, but down in the hierarchy) as per the CSS definition given:</p>
+<pre><code class="language-CSS">p strong {
+  color: blue;
+}
+</code></pre>
+<p>Different selectors can be combined together to give specificity to say, only <code>div</code> elements with the <code>top</code> class</p>
+<pre><code class="language-CSS">/* Any descendant */
+.top div {
+  background: var(--color-primary-x-light);
+  border-top: 1px solid var(--color-primary);
+  border-left: 1px solid var(--color-primary);
+}
+
+/* only the direct descendant */
+.top &gt; div {
+  border-bottom: 1px solid var(--color-primary);
+  border-right: 1px solid var(--color-primary);
+}
+</code></pre>
+<p>In order to reference the multiple following sibling elements (elements of the same hierarchical order (not the children of the chlidren)), <code>+</code> can be used as many times as needed.</p>
+<pre><code class="language-CSS">.top * + * {
+  margin-top: 1.5em;
+}
+</code></pre>
+<p>In order to reference all of the siblings of the child of the parent, <code>~</code> can be used. It is a general sibling selector.</p>
+<p>The following allows the recursive application of the style definition to all child elements (all of the hierarchy, children of children and the rest) with the following syntax:</p>
+<pre><code class="language-CSS">.top * {
+  margin-top: 1em;
+}
+</code></pre>
+<pre><code class="language-CSS">/* only all direct children */
+.top &gt; * {
+  margin-top: 1em;
+}
+
+/* only all direct children except the first one */
+.top &gt; * + * {
+  margin-top: 1em;
+}
+</code></pre>
+<p><strong>Selectors can also be combined</strong> as such (simply by writing each next to each other.):</p>
+<pre><code class="language-CSS">/* target &lt;a&gt; elements, that also have a class of .my-class */
+a.my-class {
+  color: red;
+}
+</code></pre>
+<p>The different selectors must be distinguished by a symbol, hence the type must always come first. Using commas to separate the values identifies each selector individually.</p>
+<h3>Pseudo-Classes</h3>
+<p>The various states of HTML elements can be used as a trigger for CSS styles, such as when an element is hovered over.</p>
+<pre><code class="language-CSS">/* Our link is hovered */
+a:hover {
+  outline: 1px dotted green;
+}
+
+/* Sets all even paragraphs to have a different background */
+p:nth-child(even) {
+  background: floralwhite;
+}
+</code></pre>
+<h3>Pseudo-Elements</h3>
+<p>These modify the aspects of an element, as the the beginning, end, or specific features of it (like the numbers of numbered list). Before, pseudo elements utilized only one colon, but now they require two (but the old usages are still interpretable due to backwards-compatibility)</p>
+<pre><code class="language-CSS">.my-element::before {
+  content: 'Prefix - ';
+}
+
+/* Your list will now either have red dots, or red numbers */
+li::marker {
+  color: red;
+}
+
+::selection {
+  background: black;
+  color: white;
+}
+</code></pre>
+<h3>Cascading</h3>
+<p>Cascasing Stylesheets (CSS) utilizes an algorithin to resolve contesting CSS rules using these stages: order and position of appearance, specificity, origin, and importance. Hence, the CSS code become more specific down the file as more exceptions are noted and a style element within the HTML itself will have the most specificity (i.e. it will be rendered above the other CSS definitions made in the stylesheet) unless a declaration is defined with <code>!important</code> (in which case it is placed above the stages and the inline style).</p>
+<pre><code class="language-CSS">.text {
+  color: green !important; /* Added !important */
+}
+</code></pre>
+<p>The algorithm goes through each stage one at a time and falls back on the last one (4) if all else is equal.</p>
+<ol>
+<li>Importance, affecting rule types (most important listed first):</li>
+</ol>
+<pre><code class="language-MD">1. transition rule type
+2. !important rule type (following the same order as origin)
+3. animation rule type
+4. normal rule type, such as font-size, background or color
+</code></pre>
+<ol>
+<li>Origin has an order of importance of which the most importannt (listed first) override those less important:</li>
+</ol>
+<pre><code class="language-MD">1. User agent !important: !important from ser agent base styles
+2. Local user styles !important: !important from local user styles
+3. Authored !important: !important definitions of the webpage stylesheet
+4. Authored CSS: stylesheet of the webpage
+5. Local user styles. operating system level, browser preferences, and browser extensions form this layer.
+6. User agent base styles: default browser applied styles.
+</code></pre>
+<ol>
+<li>
+<p>Specificity includes an algorithm that will be gone over in the next section which calculates which calculates what it is called for each rule. Specificity is also cumulative. For example, an ID is more specific than a Type, so the rule given to the ID will override rules given to the Type.</p>
+</li>
+<li>
+<p>The last rule defined is the rule that applies to the HTML element, meaning specificity is greater for those rules which are below others that deal with the same elements. </p>
+</li>
+</ol>
+<pre><code class="language-CSS">/* this creates a blue button */
+button {
+  color: red;
+}
+
+button {
+  color: blue;
+}
+</code></pre>
+<p>see also https://2019.wattenberger.com/blog/css-cascade and https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts</p>
+<h3>Specifity</h3>
+<p>It is calculated with an algorithm which takes into consideration all of the specificity elements culmulatively. It should only be as high as needed in order for the CSS definitions that are intended to be rendered are actually rendered. The score is not a number but consists of three component values: (A, B, C).
+1. <code>A</code> id-like specificity
+2. <code>B</code> class-like specificity
+3. <code>C</code> element-like specificity</p>
+<p>When comparing, the values are compared A first and termintes whenever the primary value is greater than the other between two elements. If the two A values are unequal, then the element with the larger A value immediately is marked as more specific, B and C are not evaluated. If the A values are equal, the B values are evaluated. If the B values are equal, the C values are evaluated. The default specificity is (0, 0, 0).</p>
+<ol>
+<li>The universal selector <code>*</code> has no specificty: (0, 0, 0).</li>
+<li>Element/type or pseudo-element selectors add element-like specificity, incrementing C by 1.</li>
+<li>Class, pseudo-class, or attribute selectors add class-like specificity, incrementing B by 1</li>
+<li>The ID selector adds id-like specificity, incrementaing A by 1</li>
+</ol>
+<p>Some selectors do not add specificity, but they always add specificity when added in an argument. The following never affect specificity:
+1. Inline style attributes: <code>&lt;div style="color: red"&gt;&lt;/div&gt;</code>
+2. !important declarations: it only changes the origin (Authored)</p>
+<pre><code class="language-CSS">/* specificity rules apply again if two definitions are marked with !important */
+.branding {
+  color: blue !important;
+}
+
+button {
+  color: red !important;
+}
+</code></pre>
+<p>Specificity can be boosted by writing the selector twice:</p>
+<pre><code class="language-CSS">.my-button.my-button {
+  background: blue;
+}
+
+button[onclick] {
+  background: grey;
+}
+</code></pre>
+<p>This is not advisable, especially if it is done often as it may indicate that the specificity has become too complex and needs reductions.</p>
+<p>If two declarations have the same specificity, the cascade falls back to the order position/order of appearance.</p>
+<h3>Inheritance</h3>
+<p>It only cascades down to the children elements. All children elements inherit from their parent elements and may only have a different rendering according to the specificity rules.</p>
+<p>The following CSS properties are inheritable:</p>
+<ul>
+<li>azimuth</li>
+<li>border-collapse</li>
+<li>border-spacing</li>
+<li>caption-side</li>
+<li>color</li>
+<li>cursor</li>
+<li>direction</li>
+<li>empty-cells</li>
+<li>font-family</li>
+<li>font-size</li>
+<li>font-style</li>
+<li>font-variant</li>
+<li>font-weight</li>
+<li>font</li>
+<li>letter-spacing</li>
+<li>line-height</li>
+<li>list-style-image</li>
+<li>list-style-position</li>
+<li>list-style-type</li>
+<li>list-style</li>
+<li>orphans</li>
+<li>quotes</li>
+<li>text-align</li>
+<li>text-indent</li>
+<li>text-transform</li>
+<li>visibility</li>
+<li>white-space</li>
+<li>widows</li>
+<li>word-spacing</li>
+</ul>
+<p>In order to control inheritance, there are three keywords that can be used: <code>inherit</code>, 
+1. <code>inherit</code> can be used to make a child inherit <strong>any property</strong>, even ones that are not inheritable by default. The parent selector must be indicated first, then the child.</p>
+<pre><code class="language-CSS">strong {
+  font-weight: 900;
+}
+
+.my-component {
+  font-weight: 500;
+}
+
+/* now strong will inherit from my-component */
+.my-component strong {
+  font-weight: inherit;
+}
+
+/* now my-component will inherit from strong */
+strong .my-component  {
+  font-weight: inherit;
+}
+</code></pre>
+<ol>
+<li><code>initial</code> rests the element to its default value (all properties have a default value in CSS)</li>
+<li><code>unset</code> behaves as <code>inherit</code> when the property is inherited by default and <code>initial</code> when the property is not inherited by default. it is useful when a reset is needed, but one does not know what the original value is.</li>
+</ol>
+<p>see also https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Types</p>
+<h3>Color</h3>
+<p>Numerically defined colors include hex, RGB, or HSL.
+1. <code>hex</code> can have a transperency using an alpha value, which are two digits at the end of the 6 digit hex code. These codes can also be written in shorthand by representing two digits with one: #b5s is identical to #bb55ss. To add alpha, then #bb55ss33 would expand to #bb55ss33.
+2. <code>RGB</code> uses three numbers to identify the among of red, green, and blue that should be in the final output color (values 0-255). The lower the number the less of that color is added in. The alpha can be set in either of the following ways: rgb(0 0 0/ 50%), rgb(0 0 0 / 0.5), rgba(0, 0, 0, 50%), or rgba(0, 0, 0, 0.5). <code>rgba</code> has wider support. 
+3. <code>HSL</code> uses hue, saturation, or lightness with hue being the color as designated by 0-360 (as in on a color wheel), and saturation (0% will make it grayscale) and lightness (100% gives a white color) being represented by respective percentages. Alpha is defined in <code>hsl</code> in the same was as <code>rgb</code> with the modded <code>hsl()</code> function or the use of the <code>hsla()</code> function.</p>
+<p>In addition to these number values, there are 148 named CSS colors: https://developer.mozilla.org/en-US/docs/Web/CSS/named-color (see also https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#color_keywords and https://almanac.httparchive.org/en/2019/css).</p>
+<p>These are some keywords: transparent (completely invinsible), color, text-shadow, text-decoration-color, background, linear-gradient, border-color, and outline-color. see also https://css-tricks.com/nerds-guide-color-web/</p>
+<h3>Sizing Units</h3>
+<ol>
+<li>**Relative lengths: <code>ch</code> is the size of a single <code>0</code>, hence <code>ch</code> is a relative unit. <code>vw</code> is the width of the browser window.</li>
+</ol>
+<pre><code class="language-txt">Unit  Relative to:
+
+Font-size-relative units
+
+em  Relative to the font size, i.e. 1.5em will be 50% larger than the base computed font size of its parent. (Historically, the height of the capital letter &quot;M&quot;).
+ex  Heuristic to determine whether to use the x-height, a letter &quot;x&quot;, or `.5em` in the current computed font size of the element.
+cap Height of the capital letters in the current computed font size of the element.
+ch  Average character advance of a narrow glyph in the element's font (represented by the &quot;0&quot; glyph).
+ic  Average character advance of a full width glyph in the element's font, as represented by the &quot;水&quot; (CJK water ideograph, U+6C34) glyph.
+rem Font size of the root element (default is 16px).
+lh  Line height of the element.
+rlh Line height of the root element.
+
+Viewport-relative units
+
+vw  1% of viewport's width. People use this unit to do cool font tricks, like resizing a header font based on the width of the page so as the user resizes, the font will also resize.
+vh  1% of viewport's height. You can use this to arrange items in a UI, if you have a footer toolbar for example.
+vi  1% of viewport's size in the root element's inline axis. Axis refers to writing modes. In horizontal writing modes like English, the inline axis is horizontal. In vertical writing modes like some Japanese typefaces, the inline axis runs top to bottom.
+vb  1% of viewport's size in the root element's block axis. For the block axis, this would be the directionality of the language. LTR languages like English would have a vertical block axis, since English language readers parse the page from top to bottom. A vertical writing mode has a horizontal block axis.
+vmin    1% of the viewport's smaller dimension.
+vmax    1% of the viewport's larger dimension.
+</code></pre>
+<ol>
+<li>numbers can come in the form of integers and decimals (0.1 or .1) and 1 usually represents 100%</li>
+<li>absolute lengths should represent real lenghts (ex. 2cm can be measurred on a screen as really being 2cm)</li>
+</ol>
+<pre><code class="language-txt">Unit    Name                      Equivalent to
+cm      Centimeters             1cm = 96px/2.54
+mm      Millimeters             1mm = 1/10th of 1cm
+Q       Quarter-millimeters     1Q = 1/40th of 1cm
+in    Inches                    1in = 2.54cm = 96px
+pc    Picas                   1pc = 1/6th of 1in
+pt    Points                    1pt = 1/72th of 1in
+px    Pixels                    1px = 1/96th of 1in
+</code></pre>
+<ol>
+<li>There are also angle units such as <code>deg</code> (degree) and <code>rad</code> (radian) or <code>dpi</code> (dots per int, useful for retina displays / high resolution displays)</li>
+</ol>
+<p>see also https://developer.mozilla.org/docs/Learn/CSS/Building_blocks/Values_and_units</p>
+<h3>Layout</h3>
+<p>view https://www.csszengarden.com/</p>
+            </article>
+        </main>
+
+        <nav class="left-side card">
+            <div id="theme-selector">
+                <button type="button" id="themesButton">Themes</button>
+                <div class="dropdown">
+                    <button type="button" id="auto" name="theme" value="auto">Auto</button>
+                    <button type="button" id="dark" name="theme" value="dark">Dark</button>
+                    <button type="button" id="light" name="theme" value="light">Light</button>
+                    <button type="button" id="grayscale" name="theme" value="grayscale">Grayscale</button>
+                    <button type="button" id="shadow" name="theme" value="shadow">Shadow</button>
+                    <p id="spacer-text">-</p>
+                </div>
+            </div>
+        </nav>
+    </div>
     <footer>
         <p>© 2025 Bertrand Lee</p>
-        <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">Connect with me on LinkedIn!</a>
+        <div id="footer-links">
+            <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">Connect with me on LinkedIn!</a>
+            <a href="../about.html#backgrounds" target="_blank">Backgrounds</a>
+            <a href="https://github.com/bertrandlee" target="_blank">Check out my GitHub!</a>
+        </div>
     </footer>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>

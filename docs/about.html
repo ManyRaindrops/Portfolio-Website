@@ -5,14 +5,14 @@
 <head>
     <!-- metadata -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Bertrand Lee">
     <meta name="description" content="Aspiring Programmer; aspiring polyglot; an aspiring person, but not incomplete.">
     <meta name="keywords" content="Bertrand Lee, About, Aspiring Programmer, Aspiring Polygot">
-    <meta http-equiv="content-security-policy" content="default-src https:">
     <meta property="og:title" content="Bertrand - Computer Science Portfolio">
     <meta property="og:description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
     <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ">
+    <meta http-equiv="content-security-policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' https: data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; frame-src 'self';">
     
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -21,7 +21,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
-    <link rel="manifest" href="images/site.webmanifest">
     
     <!-- other -->
     <title>Bertrand - Computer Science Portfolio</title>
@@ -32,69 +31,81 @@
     <link rel="canonical" href="about.html" hreflang="en-US">
 </head>
 <body>
-    <nav class="navbar">
-        <fieldset>
-            <legend>Navigation</legend>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="notes.html">Notes</a></li>
-                <li><a href="journal.html">Journal</a></li>
-                <li><a href="fr-FR/qui_suis-je.html">fr-FR</a></li>
-            </ul>
-        </fieldset>
-    </nav>
-
-    <aside id="connections">
-        <fieldset>
-            <legend>Connections</legend>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">LinkedIn</a></li>
-                <!-- add link for my CV-->
-                <!-- add link for the linknet project-->
-                <!-- add link for any pertinent stuff-->
-            </ul>
-        </fieldset>
-        <div id="controls">
-            <div id="movement">
-                <button id="Top" href="#">Move Up</button>
-                <button id="Bottom" href="#">Move Down</button>
-            <div id="ui-look">
-                <button id="switch" alt="light switch" class="light">Mode</button>
-            </div>
+    <header>
+        <h1 class="title">Bertrand's Portfolio</h1>
+        <button class="gen-nav-menu">☰</button>
+        <div class="header-links">
+            <button class="general-button" id="homeButton">Home</button>
+            <button class="general-button" id="aboutButton">About</button>
+            <button class="general-button" id="projectsButton">Projects</button>
+            <button class="general-button" id="resumeButton">Resume</button>
+            <button class="general-button" id="notesButton">Notes</button>
+            <button class="general-button" id="journalButton">Journal</button>
         </div>
-    </aside>
+    </header>
+    <div class="container">
+        <aside class="right-side card">
+            <img src="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ" alt="Card Image" loading="lazy">
+            <div class="card-content">
+                <h2>Contact</h2>
+                <button id="linkedinButton">LinkedIn</button>
+                <button id="githubButton">GitHub</button>
+            </div>
+        </aside>
+    
+        <main>
+            <section id="introduction" class="introduction">
+                <h1>About</h1>
+                <p>Aspiring Programmer; aspiring polyglot; an aspiring person, but not incomplete.</p>
+            </section>
 
-    <main>
-        <section id="introduction" class="introduction">
-            <h1>About</h1>
-            <p>Aspiring Programmer; aspiring polyglot; an aspiring person, but not incomplete.</p>
-        </section>
+            <section id="programming">
+                <h2>Aspiring Programmer</h2>
+                <p>It didn't come quickly to me, but I came to love it more and more in time. I am currently learning Python in university, but I am also learning other languages for Web-Development and working with LLMs. I am opening to studying cybersecurity as the focus for my degree, but the choice is currently open for me. Programming is a puzzle of systems and security, and my work will be in both.</p>
+            </section>
 
-        <section id="programming">
-            <h2>Aspiring Programmer</h2>
-            <p>It didn't come quickly to me, but I came to love it more and more in time. I am currently learning Python in university, but I am also learning other languages for Web-Development and working with LLMs. I am opening to studying cybersecurity as the focus for my degree, but the choice is currently open for me. Programming is a puzzle of systems and security, and my work will be in both.</p>
-        </section>
+            <section id="polyglot">
+                <h2>Aspiring Polyglot</h2>
+                <p>At first I had point of reference for language. I didn't understand the value of knowing another language besides my mother tongue because english simply dominated all of my communication. However, as I met more people, I realized that I wanted to be able to communicate with them in the language that they were most comfortable with and also be able to draw from the well of the writings and songs made in those languages.</p>
+            </section>
 
-        <section id="polyglot">
-            <h2>Aspiring Polyglot</h2>
-            <p>At first I had point of reference for language. I didn't understand the value of knowing another language besides my mother tongue because english simply dominated all of my communication. However, as I met more people, I realized that I wanted to be able to communicate with them in the language that they were most comfortable with and also be able to draw from the well of the writings and songs made in those languages.</p>
-        </section>
+            <section id="person">
+                <h2>Aspiring Person</h2>
+                <p>I am an "Aspiring Person," but I am not incomplete. What is a person? What is a human? The first distinction is life. The second is rationality. So answer me this, What is the good life? While I will not provide my response here, I will list some of my life goals: being faithful to my baptismal promises, raising a family of joy and peace, and to always "live of Love" (Luke 10:27, John 15:14, Ephesians 2:8-10). Then the question really only is, "What is the good?"
+                </p>
+            </section>
 
-        <section id="person">
-            <h2>Aspiring Person</h2>
-            <p>I am an "Aspiring Person," but I am not incomplete. What is a person? What is a human? The first distinction is life. The second is rationality. So answer me this, What is the good life? While I will not provide my response here, I will list some of my life goals: being faithful to my baptismal promises, raising a family of joy and peace, and to always "live of Love" (Luke 10:27, John 15:14, Ephesians 2:8-10). Then the question really only is, "What is the good?"
-            </p>
-        </section>
-    </main>
+            <section id="backgrounds">
+                <h2>Backgrounds</h2>
+                <a href="https://en.wikipedia.org/wiki/File:Raphael_School_of_Athens.jpg" target="_blank">School of Athens by Raphael</a>
+                <a href="https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg" target="_blank">Wanderer above the Sea of Fog by Caspar David Friedrich</a>
+                <a href="https://commons.wikimedia.org/wiki/File:Conversion_on_the_Way_to_Damascus-Caravaggio_(c.1600-1)FXD.jpg" target="_blank">Conversion on the Way to Damascus by Caravaggio</a>
+                <a href="https://commons.wikimedia.org/wiki/File:Saint_Jerome_Writing-Caravaggio_(1605-6).jpg" target="_blank">Saint Jerome Writing by Caravaggio</a>
+                
+        </main>
 
+        <nav class="left-side card">
+            <div id="theme-selector">
+                <button type="button" id="themesButton">Themes</button>
+                <div class="dropdown">
+                    <button type="button" id="auto" name="theme" value="auto">Auto</button>
+                    <button type="button" id="dark" name="theme" value="dark">Dark</button>
+                    <button type="button" id="light" name="theme" value="light">Light</button>
+                    <button type="button" id="grayscale" name="theme" value="grayscale">Grayscale</button>
+                    <button type="button" id="shadow" name="theme" value="shadow">Shadow</button>
+                    <p id="spacer-text">-</p>
+                </div>
+            </div>
+        </nav>
+    </div>
     <footer>
         <p>© 2025 Bertrand Lee</p>
-        <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">Connect with me on LinkedIn!</a>
+        <div id="footer-links">
+            <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">Connect with me on LinkedIn!</a>
+            <a href="./about.html#backgrounds" target="_blank">Backgrounds</a>
+            <a href="https://github.com/ManyRaindrops" target="_blank">Check out my GitHub!</a>
+        </div>
     </footer>
-
     <script src="scripts/main.js"></script>
 </body>
 </html>
