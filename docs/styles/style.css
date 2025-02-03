@@ -62,12 +62,6 @@
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* This is a fefault font family, I didn't specifically choose out all the fonts. I saw a tutorial that used it and I thought it looked fine. */
 }
 
-/* This allows me to put a tiny empty space in places I need when I can't figure out how to change the size of the object without messing up something else. It is temporary and I am looking to remove this soon.  */
-p#spacer-text {
-  size: 2px;
-  color: transparent;
-}
-
 /* This modifies the text in the header: "Bertrand's Portfolio." */
 h1.title {
   color: var(--theme-text-color);
@@ -80,6 +74,21 @@ a {
   display: inline-block;
   text-decoration: none;
   text-align: center;
+}
+
+#nav-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center; /* Vertically centers the buttons */
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  overflow: visible;
+}
+
+#nav-buttons button, #nav-buttons a {
+  margin: 0;
 }
 
 /* I also styled <a> tags to look like buttons, but this as had the inadvertent effect of messing with links elsewhere, I will fix that by either making those other buttons part of a group or the ones that I want here to be that way. Also, currently, the links in the header part of the notes and journal entries do not work because they rely on the same javascript calls to operate. I have not figured out how to make an exception for them. */
@@ -97,14 +106,26 @@ button, a, #themesButton {
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
-button:hover, a:hover, #themesButton:hover {
+#themesButton span {
+  display: inline-block; /* Required for transforms to work */
+  transition: transform 0.3s ease;
+}
+
+button:hover, a:hover span, #themesButton:hover {
   background: var(--theme-button-hover);
   transform: scale(1.05);
 }
 
-button:active, a:hover, #themesButton:active {
+button:active, a:hover span, #themesButton:active {
   background: var(--theme-button-hover);
   transform: scale(0.95);
+}
+
+#nav-header {
+  display: grid;
+  grid-template-columns: 1fr auto; /* Heading takes remaining space, button aligns to the right */
+  align-items: center; /* Vertically centers the children */
+  width: 100%; /* Ensure it takes full width */
 }
 
 /* This is for theme selector button and dropdown */
@@ -112,38 +133,26 @@ button:active, a:hover, #themesButton:active {
   position: relative;
 }
 
-#themesButton {
-  background: var(--theme-button-background);
-  color: var(--theme-text-color);
-}
-
-#themesButton:hover {
-  background: var(--theme-button-hover);
-}
-
-#themesButton:active {
-  background: var(--theme-button-active);
-}
-
 .dropdown {
   display: none;
   position: absolute;
-  top: 120%;
+  top: calc(100% + 10px);
   left: 0;
   width: 100%;
   background: var(--theme-button-background);
   backdrop-filter: blur(10px);
   border-radius: 16px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+  z-index: 1000;
   overflow: hidden;
-  max-height: 0;
+  max-height: none;
 }
 
 .dropdown.show {
   display: block;
-  max-height: 300px;
-  overflow-y: auto;
+  height: fit-content;
 }
 
 button#themesButton {
@@ -156,10 +165,6 @@ button#themesButton {
   background: transparent;
 }
 
-.dropdown button:hover {
-  transform: scale(1.15);
-}
-
 .dropdown button:first-child {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
@@ -168,6 +173,54 @@ button#themesButton {
 .dropdown button:last-child {
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
+}
+
+/* Search function */
+#search-bar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:  var(--theme-button-hover);
+  backdrop-filter: blur(10px);
+  z-index: 990;
+}
+
+#search {
+  width: clamp(300px, 50%, 600px);
+  padding: 10px;
+  border: none;
+  border-radius: 16px;
+  background: var(--theme-button-active);
+  color: var(--theme-text-color);
+  font-size: 1rem;
+  outline: none;
+}
+
+#search-results {
+  display: none; /* Hidden initially */
+  width: clamp(300px, 50%, 600px);
+  margin-top: 10px;
+  max-height: 300px;
+  overflow-y: auto; /* Scrollable if results exceed height */
+  background: var(--theme-button-background);
+  border-radius: 8px;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+  color: var(--theme-text-color);
+}
+
+#search-results.show {
+  display: block; /* Only show when there are search results */
+}
+
+#search-bar.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* The the implementation of variables is clear where with the body being given a value according to the variables set. If I wanted to create a new theme now, it would be very easy. However, notably, I have noticed that my pages are loading slowly, and this I have noticed from only testing the site locally. I will need to make optimizations*/
@@ -236,9 +289,40 @@ nav, main, aside {
 nav, aside {
   position: sticky;
   top: 91px; /* This specific value makes it so that the sidebar is exactly below header. This is usually not good practice, and I will need to find a way to not use a specific value like this. */
-  min-height: 400px;
+  height: 400px;
   align-self: start;
   z-index: 1;
+  overflow: visible;
+}
+
+#page-overview a {
+  display: block; /* Makes each link take up full width */
+  white-space: normal; /* Allows text to wrap */
+  word-wrap: break-word; /* Ensures long words break */
+  text-align: left; /* Aligns text for readability */
+  transition: background 0.3s ease-in-out;
+}
+
+#page-overview-container {
+  max-height: 258px; /* Restrict height */
+  overflow-y: auto; /* Enable scrolling inside */
+  padding-right: 8px; /* Prevent content from touching scrollbar */
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/* Optional: Improve scrollbar appearance */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .card {
@@ -288,7 +372,7 @@ img {
 
 main {
   padding: 1rem;
-  min-height: 60vh;
+  min-height: 100vh;
 }
 
 /* the footer has been designated to generally look a certain way regardless of the theme. */

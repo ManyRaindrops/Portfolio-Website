@@ -41,12 +41,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <h1 class="title">Bertrand's Portfolio</h1>
         <button class="gen-nav-menu">☰</button>
         <div class="header-links">
-            <button class="general-button" id="homeButton">Home</button>
-            <button class="general-button" id="aboutButton">About</button>
-            <button class="general-button" id="projectsButton">Projects</button>
-            <button class="general-button" id="resumeButton">Resume</button>
-            <button class="general-button" id="notesButton">Notes</button>
-            <button class="general-button" id="journalButton">Journal</button>
+            <button class="general-button {layer}" id="homeButton">Home</button>
+            <button class="general-button {layer}" id="aboutButton">About</button>
+            <button class="general-button {layer}" id="projectsButton">Projects</button>
+            <button class="general-button {layer}" id="resumeButton">Resume</button>
+            <button class="general-button {layer}" id="blogButton">Blog</button>
+            <button class="general-button {layer}" id="notesButton">Notes</button>
+            <button class="general-button {layer}" id="journalButton">Journal</button>
         </div>
     </header>
     <div class="container">
@@ -91,7 +92,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 </body>
 </html>"""
 
-def convert_markdown_to_html(md_file, output_dir, base_path):
+def convert_markdown_to_html(md_file, output_dir, base_path, layer):
     """Convert a Markdown file to an HTML file with the standard format."""
     try:
         with open(md_file, "r", encoding="utf-8") as f:
@@ -112,7 +113,8 @@ def convert_markdown_to_html(md_file, output_dir, base_path):
             f.write(HTML_TEMPLATE.format(
                 title=file_name,
                 content=html_content,
-                base_path=base_path
+                base_path=base_path,
+                layer=layer
             ))
     except Exception as e:
         print(f"Error writing {output_path}: {e}")
@@ -120,7 +122,7 @@ def convert_markdown_to_html(md_file, output_dir, base_path):
     
     return file_name
 
-def update_index_page(md_dir, html_dir, index_file, title, base_path):
+def update_index_page(md_dir, html_dir, index_file, title, base_path, layer):
     """Regenerate the index page with links to all notes/journal entries."""
     try:
         md_files = sorted(os.listdir(md_dir), reverse=True)
@@ -144,7 +146,8 @@ def update_index_page(md_dir, html_dir, index_file, title, base_path):
         <ul>
 {''.join(links)}        </ul>
         """,
-        base_path=base_path
+        base_path=base_path,
+        layer=layer
     )
     
     try:
@@ -153,7 +156,7 @@ def update_index_page(md_dir, html_dir, index_file, title, base_path):
     except Exception as e:
         print(f"Error writing {index_file}: {e}")
 
-def process_all(md_dir, html_dir, index_file, title, base_path_index, base_path_entries):
+def process_all(md_dir, html_dir, index_file, title):
     """Convert all Markdown files and update the index page."""
     if not os.path.exists(md_dir):
         print(f"Error: Directory {md_dir} does not exist.")
@@ -165,15 +168,11 @@ def process_all(md_dir, html_dir, index_file, title, base_path_index, base_path_
     # Convert individual entries with base_path = ".."
     for md_file in os.listdir(md_dir):
         if md_file.endswith(".md"):
-            convert_markdown_to_html(os.path.join(md_dir, md_file), html_dir, base_path_entries)
+            convert_markdown_to_html(os.path.join(md_dir, md_file), html_dir, "..", "second-layer")
     
     # Update index page with base_path = "" (or "/docs")
-    update_index_page(md_dir, html_dir, index_file, title, base_path_index)
+    update_index_page(md_dir, html_dir, index_file, title, ".", "first-layer")
 
 if __name__ == "__main__":
-    # Define base paths
-    base_path_index = "."  # For notes.html and journal.html (relative to docs/)
-    base_path_entries = ".."  # For individual note and journal entry pages (relative to docs/notes_html/ or docs/journal_html/)
-    
-    process_all(NOTES_MD_DIR, NOTES_HTML_DIR, NOTES_HTML_FILE, "My Notes", base_path_index, base_path_entries)
-    process_all(JOURNAL_MD_DIR, JOURNAL_HTML_DIR, JOURNAL_HTML_FILE, "My Journal", base_path_index, base_path_entries)
+    process_all(NOTES_MD_DIR, NOTES_HTML_DIR, NOTES_HTML_FILE, "My Notes")
+    process_all(JOURNAL_MD_DIR, JOURNAL_HTML_DIR, JOURNAL_HTML_FILE, "My Journal")
