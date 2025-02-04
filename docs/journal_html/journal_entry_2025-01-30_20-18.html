@@ -24,25 +24,25 @@
     <title>journal_entry_2025-01-30_20-18.html</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
-<body>
+<body id="top">
     <header>
         <h1 class="title">Bertrand's Portfolio</h1>
         <button class="gen-nav-menu">☰</button>
         <div class="header-links">
             <button class="general-button second-layer" id="homeButton">Home</button>
-            <button class="general-button second-layer" id="aboutButton">About</button>
             <button class="general-button second-layer" id="projectsButton">Projects</button>
             <button class="general-button second-layer" id="resumeButton">Resume</button>
             <button class="general-button second-layer" id="blogButton">Blog</button>
             <button class="general-button second-layer" id="notesButton">Notes</button>
             <button class="general-button second-layer" id="journalButton">Journal</button>
+            <button class="general-button second-layer" id="aboutButton">About</button>
         </div>
     </header>
     <div class="container">
         <aside class="right-side card">
             <img src="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ" alt="Card Image" loading="lazy">
             <div class="card-content">
-                <h2>Contact</h2>
+                <h1>Contact</h1>
                 <button id="linkedinButton">LinkedIn</button>
                 <button id="githubButton">GitHub</button>
             </div>
@@ -61,20 +61,41 @@
         </main>
 
         <nav class="left-side card">
-            <div id="theme-selector">
-                <button type="button" id="themesButton">Themes</button>
-                <div class="dropdown">
-                    <button type="button" id="auto" name="theme" value="auto">Auto</button>
-                    <button type="button" id="dark" name="theme" value="dark">Dark</button>
-                    <button type="button" id="light" name="theme" value="light">Light</button>
-                    <button type="button" id="grayscale" name="theme" value="grayscale">Grayscale</button>
-                    <button type="button" id="shadow" name="theme" value="shadow">Shadow</button>
-                    <p id="spacer-text">-</p>
+            <div id="nav-header">
+                <h1>Overview</h1>
+                <div id="theme-selector">
+                    <button type="button" id="themesButton">Themes</button>
+                    <div class="dropdown">
+                        <button type="button" id="auto" name="theme" value="auto"><span>Auto</span></button>
+                        <button type="button" id="dark" name="theme" value="dark"><span>Dark</span></button>
+                        <button type="button" id="light" name="theme" value="light"><span>Light</span></button>
+                        <button type="button" id="grayscale" name="theme" value="grayscale"><span>Gray</span></button>
+                        <button type="button" id="shadow" name="theme" value="shadow"><span>Shadow</span></button>
+                    </div>
                 </div>
+            </div>
+            <div id="page-overview-container">
+                <div id="page-overview"></div>
+            </div>
+            <div id="nav-buttons">
+                <button type="button" id="searchButton">Search</button>
+                <a href="#top" id="scroll-top-button">Top</a>
+                <a href="#bottom" id="scroll-bottom-button">Bottom</a>
             </div>
         </nav>
     </div>
-    <footer>
+
+    <div id="search-bar"> 
+        <input type="text" id="search" placeholder="Search...">
+        <!--div id="search-by-constraints">
+            <button type="button" id="search-by-title">Title</button>
+            <button type="button" id="search-by-content">Content</button>
+            <button type="button" id="search-by-tags">Tags</button>
+        </div-->
+        <div id="search-results"></div>
+    </div>
+
+    <footer id="bottom">
         <p>© 2025 Bertrand Lee</p>
         <div id="footer-links">
             <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank">Connect with me on LinkedIn!</a>
