@@ -7,8 +7,8 @@
   --theme-border: rgba(22, 22, 22, 0.2);
   --theme-header-background: rgba(22, 22, 22, 0.5);
   --theme-page-background: url('../images/Saint_Jerome_Writing-Caravaggio.jpg') center/cover no-repeat fixed;
-  --theme-header-link-background: url("../images/Conversion_on_the_Way_to_Damascus-Caravaggio.jpg") center 20%/cover no-repeat fixed;
-  --theme-header-link-background-position-y: -550px;
+  --theme-header-link-background: url("../images/Conversion_on_the_Way_to_Damascus-Caravaggio.jpg") center 30%/cover no-repeat fixed;
+  --theme-header-link-background-position-y: -180px;
   --theme-text-color: white;
   --theme-button-background: rgba(51, 51, 51, 0.5);
   --theme-button-hover: rgba(85, 85, 85, 0.5);
@@ -20,7 +20,7 @@
   --theme-background: rbga(255, 255, 255, 0.4);
   --theme-border: rgba(255, 255, 255, 0.2);
   --theme-header-background: rgba(222, 222, 222, 0.5);
-  --theme-page-background: url('../images/The_School_of_Athens_by_Raphael.jfif') center/cover no-repeat fixed;
+  --theme-page-background: url('../images/The_School_of_Athens_by_Raphael.jpg') center/cover no-repeat fixed;
   --theme-header-link-background: url("../images/Wanderer_Above_the_Misty_Fog_by_Caspar_David_Friedrich.jpg") center 20%/cover no-repeat fixed;
   --theme-text-color: black;
   --theme-button-background: rgba(255, 255, 255, 0.2);
@@ -62,6 +62,10 @@
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* This is a fefault font family, I didn't specifically choose out all the fonts. I saw a tutorial that used it and I thought it looked fine. */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* This modifies the text in the header: "Bertrand's Portfolio." */
 h1.title {
   color: var(--theme-text-color);
@@ -74,21 +78,6 @@ a {
   display: inline-block;
   text-decoration: none;
   text-align: center;
-}
-
-#nav-buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center; /* Vertically centers the buttons */
-  margin: 0;
-  margin-bottom: 10px;
-  padding: 0;
-  overflow: visible;
-}
-
-#nav-buttons button, #nav-buttons a {
-  margin: 0;
 }
 
 /* I also styled <a> tags to look like buttons, but this as had the inadvertent effect of messing with links elsewhere, I will fix that by either making those other buttons part of a group or the ones that I want here to be that way. Also, currently, the links in the header part of the notes and journal entries do not work because they rely on the same javascript calls to operate. I have not figured out how to make an exception for them. */
@@ -293,6 +282,26 @@ nav, aside {
   align-self: start;
   z-index: 1;
   overflow: visible;
+}
+
+nav.left-side {
+  display: flex;
+  flex-direction: column;
+}
+
+#nav-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  margin: 0;
+  margin-top: auto;
+  padding: 0;
+  overflow: visible;
+}
+
+#nav-buttons button, #nav-buttons a {
+  margin: 0;
 }
 
 #page-overview a {
