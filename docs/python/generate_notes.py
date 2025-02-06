@@ -6,7 +6,7 @@ NOTES_MD_DIR = "docs/files/notes_md"
 NOTES_HTML_DIR = "docs/notes_html"
 NOTES_HTML_FILE = "docs/notes.html"
 
-JOURNAL_MD_DIR = "docs/journal_md"
+JOURNAL_MD_DIR = "docs/files/journal_md"
 JOURNAL_HTML_DIR = "docs/files/journal_html"
 JOURNAL_HTML_FILE = "docs/journal.html"
 
@@ -15,7 +15,17 @@ PROJECTS_HTML_DIR = "docs/files/projects_html"
 PROJECTS_HTML_FILE = "docs/projects.html"
 
 # HTML template for individual pages
-HTML_TEMPLATE = """<!DOCTYPE html>
+HTML_TEMPLATE = """<!-- ===================================================== -->
+<!--                                                       -->
+<!-- BSD 3-Clause License Copyright (c) 2025, Bertrand Lee -->
+<!--                                                       -->
+<!-- ===================================================== -->
+
+
+
+
+
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
     <!-- metadata -->
