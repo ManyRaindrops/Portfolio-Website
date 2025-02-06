@@ -1,13 +1,3 @@
-// ===================================================== //
-//                                                       //
-// BSD 3-Clause License Copyright (c) 2025, Bertrand Lee //
-//                                                       //
-// ===================================================== //
-
-
-
-
-
 const searchBar = document.getElementById("search-bar");
 const searchInput = document.getElementById("search");
 const searchResults = document.getElementById("search-results");
