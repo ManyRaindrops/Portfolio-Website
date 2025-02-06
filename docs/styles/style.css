@@ -21,7 +21,7 @@
   --theme-background: rbga(22, 22, 22, 0.6);
   --theme-header-background: rgba(22, 22, 22, 0.7);
   --theme-page-background: url('../images/Saint_Jerome_Writing-Caravaggio.jpg') center/cover no-repeat fixed;
-  --theme-header-link-background: url("../images/Conversion_on_the_Way_to_Damascus-Caravaggio.jpg") center 30%/cover no-repeat fixed;
+  --theme-header-link-background: url('../images/Conversion_on_the_Way_to_Damascus-Caravaggio.jpg') center 30%/cover no-repeat fixed;
   --theme-header-link-background-position-y: -180px;
 
   /* buttons */
@@ -49,7 +49,7 @@
 .theme-light {
   /* backgrounds */
   --theme-page-background: url('../images/The_School_of_Athens_by_Raphael.jpg') center/cover no-repeat fixed;
-  --theme-header-link-background: url("../images/Wanderer_Above_the_Misty_Fog_by_Caspar_David_Friedrich.jpg") center 20%/cover no-repeat fixed;
+  --theme-header-link-background: url('../images/Wanderer_Above_the_Misty_Fog_by_Caspar_David_Friedrich.jpg') center 20%/cover no-repeat fixed;
 }
 
 /* Grayscale Theme Specifics */

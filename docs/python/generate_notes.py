@@ -19,7 +19,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <meta name="author" content="Bertrand Lee">
     <meta name="description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
     <meta name="keywords" content="Bertrand Lee, Portfolio, Computer Science, Machine Learning, AI, RAG, Web Development">
-    <meta property="og:title" content="Bertrand - Computer Science Portfolio">
+    <meta property="og:title" content="Bertrand's Portfolio">
     <meta property="og:description" content="Bertrand Lee's portfolio showcasing programming skills and projects in machine learning, AI, RAG, web-development, and more.">
     <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D4E03AQH2X3hGofYJSA/profile-displayphoto-shrink_400_400/B4EZPiubCEHAAk-/0/1734675641392?e=1743638400&v=beta&t=m_WzShCEoK3i9xjb3ionYUf6NK03tXljwj1JEVoh_bQ">
     <meta http-equiv="content-security-policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' https: data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; frame-src 'self';">
@@ -52,11 +52,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     </header>
     <div class="container">
         <aside class="right-side">
-            <img id="my-headshot-picture" src="{base_path}images/Bertrand Lee Headshot Photo.png" alt="Card Image" loading="lazy">
+            <img id="my-headshot-picture" src="{base_path}/images/Bertrand Lee Headshot Photo.png" alt="Card Image" loading="lazy">
             <div class="card-content">
                 <h1>Contact</h1>
-                <button id="linkedinButton"><img src="{base_path}images/LI-In-Bug.png" alt="Logo" class="logo linkedin">LinkedIn</button>
-                <button id="githubButton"><img src="{base_path}images/github-mark-white.png" alt="Logo" class="logo github">GitHub</button>
+                <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank" rel="noopener"><img src="{base_path}/images/LI-In-Bug.png" alt="Logo" class="logo linkedin">Connect with me on LinkedIn!</a>
+                <a href="https://github.com/ManyRaindrops" target="_blank" rel="noopener"><img src="{base_path}/images/github-mark-white.png" alt="Logo" class="logo github">Check out my GitHub!</a>
             </div>
         </aside>
     
@@ -66,7 +66,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             </article>
         </main>
 
-        <nav class="left-side card">
+        <nav class="left-side">
             <div id="nav-header">
                 <h1>Overview</h1>
                 <div id="theme-selector">
@@ -93,20 +93,15 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
     <div id="search-bar"> 
         <input type="text" id="search" placeholder="Search...">
-        <!--div id="search-by-constraints">
-            <button type="button" id="search-by-title">Title</button>
-            <button type="button" id="search-by-content">Content</button>
-            <button type="button" id="search-by-tags">Tags</button>
-        </div-->
         <div id="search-results"></div>
     </div>
 
     <footer id="bottom">
         <p>© 2025 Bertrand Lee</p>
         <div id="footer-links">
-            <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank" rel="noopener"><img src="images/LI-In-Bug.png" alt="Logo" class="logo linkedin">Connect with me on LinkedIn!</a>
-            <a href="https://cal.com/bertrand-lee-25" target="_blank" rel="noopener"><img src="images/calDOTcom.png" alt="Logo" class="logo calDOTcom">Schedule a Meeting</a>
-            <a href="https://github.com/ManyRaindrops" target="_blank" rel="noopener"><img src="images/github-mark-white.png" alt="Logo" class="logo github">Check out my GitHub!</a>
+            <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank" rel="noopener"><img src="{base_path}/images/LI-In-Bug.png" alt="Logo" class="logo linkedin">Connect with me on LinkedIn!</a>
+            <a href="https://cal.com/bertrand-lee-25" target="_blank" rel="noopener"><img src="{base_path}/images/calDOTcom.png" alt="Logo" class="logo calDOTcom">Schedule a Meeting</a>
+            <a href="https://github.com/ManyRaindrops" target="_blank" rel="noopener"><img src="{base_path}/images/github-mark-white.png" alt="Logo" class="logo github">Check out my GitHub!</a>
         </div>
     </footer>
     <script src="{base_path}/scripts/main.js"></script>
