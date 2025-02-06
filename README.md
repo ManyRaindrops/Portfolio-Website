@@ -7,6 +7,13 @@ Goals of this project:
 2. Create a personal website, which I can use to help me create other sites that I may wish to make in the future.
 3. Demonstrate my ability to learn quickly (start: 1/28/2025 ; end: 2/5/2025 ; irregular work schedule due to school)
 
+Goals acheived:
+1. Gained familiarity with beginner HTML and CSS coding practices, utilized core features on Github (Issues, Pull Requests, and Github Pages) and Git (commits, staging, branches, revert), programmed the entire site in VS Code, and learned to prompt LLMs for the purposes listed below.
+2. I have created the primary elements of the site, and will continue to add content, update the site, and fix issues.
+3. Granted that I am the sole evaluator of my experience doing this, I believe that I have demonstrated that I can learn quickly and apply the best of what I have learned. That skill, more than ever, is neccessary when working with AI, which was an essential learning tool in this project. Using AI is like following a tutorial, except you don't know if the tutor is always right. It is best used for searching basic elements that I, the person, can use to compile into a larger and more complex system.
+
+In this project, by 2/5/2025, I did not get to delve deeply into JavaScript.
+
 The use of AI in this project:
 1. Explaning new/hard concepts: very useful for quickly getting a response rather than having to search through general coding websites.
 2. Writing helpful comments: especially useful for the learning process, when not all points are in memory or fully understood. Comments by AI are labeled: "AI-made"
