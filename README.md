@@ -19,6 +19,9 @@ Resources used:
 - Leading LLMs (free plan): GPT 4o, Gemini, and DeepSeek
 - Copilot feature (free plan)
 
+Current status:
+1. Main Project Goals
+
 # File Explanations
 1. The primary pages (index.html, projects.html, etc.) and secondary pages (in folders journal_html, notes_html, etc.) contain all of the visible content that the user interacts with. main.js, styles.css, and all the images are in their respsective folders.
 2. The "files" folder contains the original markdown used to create notes and journal entries. It is translated to HTML with the python scripts in the Python folder. The Python was created for purpose of automation and creating template documents.

@@ -7,11 +7,11 @@ NOTES_HTML_DIR = "docs/notes_html"
 NOTES_HTML_FILE = "docs/notes.html"
 
 JOURNAL_MD_DIR = "docs/files/journal_md"
-JOURNAL_HTML_DIR = "docs/files/journal_html"
+JOURNAL_HTML_DIR = "docs/journal_html"
 JOURNAL_HTML_FILE = "docs/journal.html"
 
 PROJECTS_MD_DIR = "docs/projects_md"
-PROJECTS_HTML_DIR = "docs/files/projects_html"
+PROJECTS_HTML_DIR = "docs/projects_html"
 PROJECTS_HTML_FILE = "docs/projects.html"
 
 # HTML template for individual pages
@@ -70,8 +70,8 @@ HTML_TEMPLATE = """<!-- ===================================================== --
             <img id="my-headshot-picture" src="{base_path}/images/Bertrand Lee Headshot Photo.png" alt="Card Image" loading="lazy">
             <div class="card-content">
                 <h1>Contact</h1>
-                <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank" rel="noopener"><img src="{base_path}/images/LI-In-Bug.png" alt="Logo" class="logo linkedin">Connect with me on LinkedIn!</a>
-                <a href="https://github.com/ManyRaindrops" target="_blank" rel="noopener"><img src="{base_path}/images/github-mark-white.png" alt="Logo" class="logo github">Check out my GitHub!</a>
+                <a href="https://www.linkedin.com/in/bertrand-lee-76624b322/" target="_blank" rel="noopener"><img src="{base_path}/images/LI-In-Bug.png" alt="Logo" class="logo linkedin">LinkedIn</a>
+                <a href="https://github.com/ManyRaindrops" target="_blank" rel="noopener"><img src="{base_path}/images/github-mark-white.png" alt="Logo" class="logo github">GitHub</a>
             </div>
         </aside>
     
