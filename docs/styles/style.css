@@ -1,326 +1,114 @@
-/* Themes */
-/* Using variables allows me to create themes easily. */
+/* ===================================================== */
+/*                                                       */
+/* BSD 3-Clause License Copyright (c) 2025, Bertrand Lee */
+/*                                                       */
+/* ===================================================== */
 
-/* The light theme includes "Saint Jerome Writing" by Caravaggio as the background image. It also includes Caravagio's other work, "Conversion on the Way to Dmascus." They are both excelent works of art. */
+
+
+
+
+/* ===================================================== */
+/* THEME DEFINITIONS                                     */
+/* ===================================================== */
+
+/* Dark Theme */
 .theme-dark {
-  --theme-background: rbga(22, 22, 22, 0.4);
+  --theme-text-color: white;
   --theme-border: rgba(22, 22, 22, 0.2);
-  --theme-header-background: rgba(22, 22, 22, 0.5);
+
+  /* backgrounds */
+  --theme-background: rbga(22, 22, 22, 0.6);
+  --theme-header-background: rgba(22, 22, 22, 0.7);
   --theme-page-background: url('../images/Saint_Jerome_Writing-Caravaggio.jpg') center/cover no-repeat fixed;
   --theme-header-link-background: url("../images/Conversion_on_the_Way_to_Damascus-Caravaggio.jpg") center 30%/cover no-repeat fixed;
   --theme-header-link-background-position-y: -180px;
-  --theme-text-color: white;
-  --theme-button-background: rgba(51, 51, 51, 0.5);
-  --theme-button-hover: rgba(85, 85, 85, 0.5);
-  --theme-button-active: rgba(119, 119, 119, 0.5);
+
+  /* buttons */
+  --theme-button-background: rgba(51, 51, 51, 0.4);
+  --theme-button-hover: rgba(85, 85, 85, 0.6);
+  --theme-button-active: rgba(119, 119, 119, 0.8);
 }
 
-/* The light theme includes "The School of Athens" by Raphael as the background image. It also includes "Wanderer Above the Misty Fog" by Caspar David Friedrich. Both of which are beautiful works of art. */
-.theme-light {
-  --theme-background: rbga(255, 255, 255, 0.4);
-  --theme-border: rgba(255, 255, 255, 0.2);
-  --theme-header-background: rgba(222, 222, 222, 0.5);
-  --theme-page-background: url('../images/The_School_of_Athens_by_Raphael.jpg') center/cover no-repeat fixed;
-  --theme-header-link-background: url("../images/Wanderer_Above_the_Misty_Fog_by_Caspar_David_Friedrich.jpg") center 20%/cover no-repeat fixed;
+/* Light and Grayscale Theme Overlap */
+.theme-light, .theme-grayscale {
   --theme-text-color: black;
+  --theme-border: rgba(255, 255, 255, 0.2);
+
+  /* backgrounds */
+  --theme-background: rbga(255, 255, 255, 0.4);
+  --theme-header-background: rgba(222, 222, 222, 0.5);
+
+  /* buttons */
   --theme-button-background: rgba(255, 255, 255, 0.2);
   --theme-button-hover: rgba(230, 230, 230, 0.4);
   --theme-button-active: rgba(204, 204, 204, 0.6);
 }
 
-.theme-grayscale {
-  --theme-background: rbga(255, 255, 255, 0.4);
-  --theme-border: rgba(255, 255, 255, 0.2);
-  --theme-header-background: rgba(222, 222, 222, 0.5);
-  --theme-page-background: #bfbfbf;
-  --theme-header-link-background: #eee;
-  --theme-text-color: black;
-  --theme-button-background: rgba(128, 128, 128, 0.2);
-  --theme-button-hover: rgba(160, 160, 160, 0.4);
-  --theme-button-active: rgba(192, 192, 192, 0.6);
-  filter: grayscale(100%); /* Apply grayscale filter to all content */
-
+/* Light Theme Specifics */
+.theme-light {
+  /* backgrounds */
+  --theme-page-background: url('../images/The_School_of_Athens_by_Raphael.jpg') center/cover no-repeat fixed;
+  --theme-header-link-background: url("../images/Wanderer_Above_the_Misty_Fog_by_Caspar_David_Friedrich.jpg") center 20%/cover no-repeat fixed;
 }
 
+/* Grayscale Theme Specifics */
+.theme-grayscale {
+  /* backgrounds */
+  --theme-page-background: #bfbfbf;
+  --theme-header-link-background: #eee;
+
+  /* filter */
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+/* Shadow Theme */
 .theme-shadow {
-  --theme-background: rbga(0, 0, 0, 0.5);
+  --theme-text-color: #777;
   --theme-border: rgba(222, 222, 222, 0.2);
+
+  /* backgrounds */
+  --theme-background: rbga(0, 0, 0, 0.5);
   --theme-header-background: rgba(0, 0, 0, 0.5);
   --theme-page-background: #000;
   --theme-header-link-background: #111;
-  --theme-text-color: #777;
+
+  /* buttons */
   --theme-button-background: rgba(111, 111, 111, 0.2);
   --theme-button-hover: rgba(111, 111, 111, 0.4);
   --theme-button-active: rgba(111, 111, 111, 0.6);
 }
 
-/* This helps to ensure consistency, however, at the moment, my program is only optimized for chromium browsers */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* This is a fefault font family, I didn't specifically choose out all the fonts. I saw a tutorial that used it and I thought it looked fine. */
+/* ===================================================== */
+/* BROWSER FALLBACKS AND COMPATABILITY                   */
+/* ===================================================== */
+
+/* blur fallback for older browsers */
+@supports not (backdrop-filter: blur(10px)) {
+  button, a, #themesButton, header, nav, main, aside, .dropdown, #search-bar {
+    background: var(--theme-background);
+  }
 }
 
-html {
-  scroll-behavior: smooth;
+/* changes motion effects based on user preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
-/* This modifies the text in the header: "Bertrand's Portfolio." */
-h1.title {
-  color: var(--theme-text-color);
-  margin: 30px;
-  font-size: clamp(1.5rem, 2vw, 3rem);
+/* for high-contrast mode */
+@media (forced-colors: active) {
+  .button {
+    border: 1px solid currentColor;
+  }
 }
 
-/* I thought that the frosted effect looked nice, so I added it to almost everything as a common style, including the buttons. */
-a {
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
-}
-
-/* I also styled <a> tags to look like buttons, but this as had the inadvertent effect of messing with links elsewhere, I will fix that by either making those other buttons part of a group or the ones that I want here to be that way. Also, currently, the links in the header part of the notes and journal entries do not work because they rely on the same javascript calls to operate. I have not figured out how to make an exception for them. */
-button, a, #themesButton {
-  width: 100%;
-  padding: 10px;
-  margin: 5px;
-  border: none;
-  border-radius: 16px;
-  background: var(--theme-button-background);
-  backdrop-filter: blur(10px);
-  color: var(--theme-text-color);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-#themesButton span {
-  display: inline-block; /* Required for transforms to work */
-  transition: transform 0.3s ease;
-}
-
-button:hover, a:hover span, #themesButton:hover {
-  background: var(--theme-button-hover);
-  transform: scale(1.05);
-}
-
-button:active, a:hover span, #themesButton:active {
-  background: var(--theme-button-hover);
-  transform: scale(0.95);
-}
-
-#nav-header {
-  display: grid;
-  grid-template-columns: 1fr auto; /* Heading takes remaining space, button aligns to the right */
-  align-items: center; /* Vertically centers the children */
-  width: 100%; /* Ensure it takes full width */
-}
-
-/* This is for theme selector button and dropdown */
-#theme-selector {
-  position: relative;
-}
-
-.dropdown {
-  display: none;
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0;
-  width: 100%;
-  background: var(--theme-button-background);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  scrollbar-width: none;
-  -ms-overflow-style: none; 
-  z-index: 1000;
-  overflow: hidden;
-  max-height: none;
-}
-
-.dropdown.show {
-  display: block;
-  height: fit-content;
-}
-
-button#themesButton {
-  margin: 0;
-}
-
-.dropdown button {
-  margin: 0;
-  border-radius: 0;
-  background: transparent;
-}
-
-.dropdown button:first-child {
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-}
-
-.dropdown button:last-child {
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-}
-
-/* Search function */
-#search-bar {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:  var(--theme-button-hover);
-  backdrop-filter: blur(10px);
-  z-index: 990;
-}
-
-#search {
-  width: clamp(300px, 50%, 600px);
-  padding: 10px;
-  border: none;
-  border-radius: 16px;
-  background: var(--theme-button-active);
-  color: var(--theme-text-color);
-  font-size: 1rem;
-  outline: none;
-}
-
-#search-results {
-  display: none; /* Hidden initially */
-  width: clamp(300px, 50%, 600px);
-  margin-top: 10px;
-  max-height: 300px;
-  overflow-y: auto; /* Scrollable if results exceed height */
-  background: var(--theme-button-background);
-  border-radius: 8px;
-  padding: 10px;
-  backdrop-filter: blur(5px);
-  color: var(--theme-text-color);
-}
-
-#search-results.show {
-  display: block; /* Only show when there are search results */
-}
-
-#search-bar.active {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* The the implementation of variables is clear where with the body being given a value according to the variables set. If I wanted to create a new theme now, it would be very easy. However, notably, I have noticed that my pages are loading slowly, and this I have noticed from only testing the site locally. I will need to make optimizations*/
-body {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding-top: var(--header-height);
-  background: var(--theme-page-background);
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background: var(--theme-header-background);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--theme-border);    
-  position: sticky;
-  top: 0;
-  height: 75px;
-  z-index: 1000; /* This keeps the header above other content */
-}
-
-button.general-button {
-  margin: 0;
-}
-
-.header-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.gen-nav-menu {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--theme-text-color);
-}
-
-.container {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr clamp(350px, 50%, 100%) 1fr;
-  gap: 1rem;
-  padding: 1rem;
-  margin-top: var(--header-height);
-}
-
-/* Since they are so similar, I can stule them all together. */
-nav, main, aside {
-  background: var(--theme-background);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  border: 1px solid var(--theme-border);
-  padding: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  color: var(--theme-text-color)
-}
-
-/* This keeps the sidebars right below the header even as the page moves.  */
-nav, aside {
-  position: sticky;
-  top: 91px; /* This specific value makes it so that the sidebar is exactly below header. This is usually not good practice, and I will need to find a way to not use a specific value like this. */
-  height: 400px;
-  align-self: start;
-  z-index: 1;
-  overflow: visible;
-}
-
-nav.left-side {
-  display: flex;
-  flex-direction: column;
-}
-
-#nav-buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-  margin: 0;
-  margin-top: auto;
-  padding: 0;
-  overflow: visible;
-}
-
-#nav-buttons button, #nav-buttons a {
-  margin: 0;
-}
-
-#page-overview a {
-  display: block; /* Makes each link take up full width */
-  white-space: normal; /* Allows text to wrap */
-  word-wrap: break-word; /* Ensures long words break */
-  text-align: left; /* Aligns text for readability */
-  transition: background 0.3s ease-in-out;
-}
-
-#page-overview-container {
-  max-height: 258px; /* Restrict height */
-  overflow-y: auto; /* Enable scrolling inside */
-  padding-right: 8px; /* Prevent content from touching scrollbar */
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-/* Optional: Improve scrollbar appearance */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -334,13 +122,212 @@ nav.left-side {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.card {
+/* ===================================================== */
+/* BASE STYLES AND RESETS                                */
+/* ===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+body {
+  /* layout */
+  height: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--header-height);
+
+  /* visuals */
+  background: var(--theme-page-background);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ===================================================== */
+/* GLOBAL VARIABLES                                      */
+/* ===================================================== */
+
+:root {
+  /* Common Values */
+  --spacing-unit: 1rem;
+  --border-radius-standard: 16px;
+  --transition-timing: 0.3s ease;
+  --blur-effect: blur(10px);
+  
+  /* animation values */
+  --scale-hover: 1.05;
+  --scale-active: 0.95;
+  --transition-duration: 0.3s;
+  --transition-timing: ease;
+  
+  /* z-index overview */
+  --z-dropdown: 1000;
+  --z-header: 900;
+  --z-modal: 990;
+}
+
+/* ===================================================== */
+/* MAIN LAYOUT STYLES                                    */
+/* ===================================================== */
+
+/* ----------------------------------------------------- */
+/* Header                                                */
+/* ----------------------------------------------------- */
+
+h1.title {
+  color: var(--theme-text-color);
+  margin: 30px;
+  font-size: clamp(1.5rem, 2vw, 3rem);
+}
+
+header {
+  /* layout */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* dimension */
+  height: 75px;
+  padding: 1rem;
+
+  /* background */
+  background: var(--theme-header-background);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid var(--theme-border);    
+}
+
+/* Header Links */
+.header-links {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ----------------------------------------------------- */
+/* Nav, Main, Aside                                      */
+/* ----------------------------------------------------- */
+
+.container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr clamp(350px, 50%, 100%) 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: var(--header-height);
+}
+
+nav, main, aside {
+  background: var(--theme-background);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid var(--theme-border);
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  color: var(--theme-text-color);
+}
+
+/* I need to figure out how to display inline code better and make the appearance of the text actually look nice and not just like text of different sizes */
+main {
+  padding: 1rem;
+  min-height: 100vh;
+  line-height: 1.5;
+  /* I don't know if I should add this
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%; */
+}
+
+nav, aside {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 91px;
+  height: 400px;
+  align-self: start;
+  z-index: 1;
+  overflow: visible;
+}
+
+/* NAV */
+nav.left-side {
+  display: flex;
+  flex-direction: column;
+}
+
+/* For "Overview," Theme buttons, and the heading list */
+#nav-header {
+  display: grid;
+  grid-template-columns: 1fr auto; 
+  align-items: center;
+  width: 100%;
+}
+
+#page-overview-container {
+  /* overflow settings */
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+  /* Spacing */
+  padding-right: 8px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+
+  max-height: 258px;
+}
+
+#page-overview-container a:hover {
+  transform: scale(1.03);
+}
+
+#page-overview-container a:active {
+  transform: scale(0.97);
+}
+
+#page-overview a {
+  display: block;
+
+  /* text formatting */
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+/* For Search, Top, Bottom */
+#nav-buttons {
+  /* layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* spacing */
+  gap: 10px;
+  margin-top: auto;
+  padding: 0;
+}
+
+#nav-buttons button, #nav-buttons a {
+  margin: 0;
+}
+
+/* ASIDE */
+.right-side, .left-side {
   overflow: hidden;
   border-radius: 16px;
   transition: border-radius 0.3s ease;
 }
 
-img {
+.right-side img#my-headshot-picture {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -362,46 +349,61 @@ img {
   transition: transform 0.3s ease;
 }
 
-.card:hover img {
+.right-side:hover #my-headshot-picture {
   transform: scale(1.1) translateY(-10px);
 }
 
-.card:hover .card-content {
+.right-side:hover .card-content {
   transform: translateY(-5px);
 }
 
-.card:hover h2 {
+.right-side:hover h2 {
   transform: scale(1.1);
   transition: transform 0.6s ease;
 }
 
-.card:hover a {
-  opacity: 1;
+.right-side button:hover {
+  transform: scale(1.03);
 }
 
-main {
-  padding: 1rem;
-  min-height: 100vh;
+.right-side button:active {
+  transform: scale(0.97);
 }
 
-/* the footer has been designated to generally look a certain way regardless of the theme. */
+/* ----------------------------------------------------- */
+/* Footer                                                */
+/* ----------------------------------------------------- */
+
 footer {
-  background: rgba(22, 22, 22, 0.5);
-  backdrop-filter: blur(10px);
   color: white;
+
+  /* layout */
+  background: rgba(22, 22, 22, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  bottom: 0;
+
+  /* sizing */
   padding: 1rem;
   min-height: 100px;
   margin-top: auto;
   width: 100%;
   position: relative;
-  bottom: 0;
 }
 
-/* This organizes the links that are in the footer, and allows me to easily add more. */
+/* Footer Links */
 div#footer-links {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+div#footer-links a:hover {
+  transform: scale(1.02);
+}
+
+div#footer-links a:active {
+  transform: scale(0.98);
 }
 
 aside .card-content a:hover {
@@ -409,14 +411,226 @@ aside .card-content a:hover {
   transform: scale(1.05);
 }
 
-/* Horizontal stack of buttons in aside */
+/* Horizontal Stack of Buttons in Aside */
 aside .card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* The following makes sure that the elmeents in the page don't overlap or become too squished. There are multiple to ensure this. I am not yet sure if there is a better way to do this. */
+/* ===================================================== */
+/* BUTTON AND LINK STYLES                                */
+/* ===================================================== */
+
+/* ----------------------------------------------------- */
+/* Button and Link                                       */
+/* ----------------------------------------------------- */
+
+.logo {
+  height: clamp(5px, 2vw, 20px);
+  width: clamp(5px, 2vw, 20px);
+  margin-right: 10px;
+  padding: 0;
+  position: relative;
+}
+
+.logo.linkedin {
+  width: clamp(6px, 2.3vw, 24px);
+}
+
+.logo.calDOTcom {
+  border-radius: clamp(4px, 0.4vw, 6px);
+}
+
+button, a {
+  /* layout */
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 5px;
+
+  /* borders & background */
+  border: none;
+  border-radius: 16px;
+  background: var(--theme-button-background);
+
+  /* visuals */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: transform var(--transition-duration) var(--transition-timing);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+
+  /* Typography */
+  color: var(--theme-text-color);
+  font-size: 1rem;
+  font-weight: bold;
+
+
+  /* Interaction */
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover, a:hover {
+  background: var(--theme-button-hover);
+  -webkit-transform: scale(var(--scale-hover));
+  -moz-transform: scale(var(--scale-hover));
+  -ms-transform: scale(var(--scale-hover));
+  transform: scale(var(--scale-hover));
+}
+
+button:active, a:active {
+  background: var(--theme-button-hover);
+  -webkit-transform: scale(var(--scale-active));
+  -moz-transform: scale(var(--scale-active));
+  -ms-transform: scale(var(--scale-active));
+  transform: scale(var(--scale-active));
+}
+
+/* ----------------------------------------------------- */
+/* Custom Dropdown                                       */
+/* ----------------------------------------------------- */
+
+#theme-selector {
+  position: relative;
+}
+
+/* dropdown form styles */
+.dropdown {
+  display: none;
+
+  /* Positioning */
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 1000;
+
+  /* Dimensions */
+  width: 100%;
+  max-height: none;
+  overflow: hidden;
+
+  /* Background & Visual Effects */
+  background: var(--theme-button-background);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.dropdown::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.dropdown.show {
+  display: block;
+  height: fit-content;
+}
+
+/* dropdown button styles */
+button#themesButton {
+  margin: 0;
+  
+}
+
+.dropdown button {
+  margin: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.dropdown button:first-child {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.dropdown button:last-child {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+/* ===================================================== */
+/* Search Feature                                        */
+/* ===================================================== */
+
+#search-bar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:  var(--theme-button-hover);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 990;
+}
+
+#search {
+  width: clamp(300px, 50%, 600px);
+  padding: 10px;
+  border: none;
+  border-radius: 16px;
+  background: var(--theme-button-active);
+  color: var(--theme-text-color);
+  font-size: 1rem;
+  outline: none;
+}
+
+#search-results {
+  display: none;
+  width: clamp(300px, 50%, 600px);
+  margin-top: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: var(--theme-button-background);
+  border-radius: 8px;
+  padding: 10px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+  color: var(--theme-text-color);
+}
+
+#search-results.show {
+  display: block;
+}
+
+#search-bar.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button.general-button {
+  margin: 0;
+}
+
+.gen-nav-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--theme-text-color);
+}
+
+/* ===================================================== */
+/* RESPONSIVE DESIGN STYLES                              */
+/* ===================================================== */
+
+/* ----------------------------------------------------- */
+/* Between Half and Full Screen                          */
+/* ----------------------------------------------------- */
+
 @media (max-width: 1200px) {
   .container {
     grid-template-columns: 1fr 1fr;
@@ -439,6 +653,10 @@ aside .card-content {
   }
 }
 
+/* ----------------------------------------------------- */
+/* Almost Half Screen                                    */
+/* ----------------------------------------------------- */
+
 @media (max-width: 900px) {
   .gen-nav-menu {
       display: block;
@@ -452,7 +670,8 @@ aside .card-content {
       right: 0;
       background: var(--theme-header-link-background);
       background-position-y: var(--theme-header-link-background-position-y);
-      backdrop-filter: blur(10px); /* Blur effect */
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
       padding: 1rem;
       flex-direction: column;
       z-index: 1000;      
@@ -463,13 +682,39 @@ aside .card-content {
   }
 }
 
+/* ----------------------------------------------------- */
+/* Phone size screen                                     */
+/* ----------------------------------------------------- */
+
 @media (max-width: 600px) {
+  /* slows animations for mobile */
+  * {
+    transition-duration: 0.2s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
   .container {
-      grid-template-columns: 1fr; /* Stacks everything */
+      grid-template-columns: 1fr;
       grid-template-rows: auto auto auto;
   }
 
   aside, nav, main {
-      grid-column: span 1; /* Each takes full width */
+      grid-column: span 1;
+  }
+}
+
+/* Touch Screen compatbility */
+@media (hover: none) and (pointer: coarse) {
+  .button {
+    /* larger touch targets, buttons */
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px;
+    
+    /* hover states are not possible with touch */
+    &:hover {
+      transform: none;
+    }
   }
 }

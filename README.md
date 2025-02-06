@@ -18,3 +18,7 @@ Resources used:
 - https://web.dev/learn
 - Leading LLMs (free plan): GPT 4o, Gemini, and DeepSeek
 - Copilot feature (free plan): for usages, see above
+
+Usage of logos to links to my profiles on these sites are in accordance with the policies of the companies referred to as of Feburary 5, 2025.
+- https://brand.linkedin.com/policies
+- https://github.com/logos
