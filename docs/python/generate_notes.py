@@ -2,12 +2,17 @@ import os
 import markdown
 
 # Directories for notes and journals
-NOTES_MD_DIR = "docs/notes_md"
+NOTES_MD_DIR = "docs/files/notes_md"
 NOTES_HTML_DIR = "docs/notes_html"
 NOTES_HTML_FILE = "docs/notes.html"
+
 JOURNAL_MD_DIR = "docs/journal_md"
-JOURNAL_HTML_DIR = "docs/journal_html"
+JOURNAL_HTML_DIR = "docs/files/journal_html"
 JOURNAL_HTML_FILE = "docs/journal.html"
+
+PROJECTS_MD_DIR = "docs/projects_md"
+PROJECTS_HTML_DIR = "docs/files/projects_html"
+PROJECTS_HTML_FILE = "docs/projects.html"
 
 # HTML template for individual pages
 HTML_TEMPLATE = """<!DOCTYPE html>
@@ -192,3 +197,4 @@ def process_all(md_dir, html_dir, index_file, title):
 if __name__ == "__main__":
     process_all(NOTES_MD_DIR, NOTES_HTML_DIR, NOTES_HTML_FILE, "My Notes")
     process_all(JOURNAL_MD_DIR, JOURNAL_HTML_DIR, JOURNAL_HTML_FILE, "My Journal")
+    """process_all(JOURNAL_MD_DIR, JOURNAL_HTML_DIR, JOURNAL_HTML_FILE, "My Projects")"""
