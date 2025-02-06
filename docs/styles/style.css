@@ -168,9 +168,9 @@ body {
   --transition-timing: ease;
   
   /* z-index overview */
-  --z-dropdown: 1000;
+  --z-dropdown: 1001;
   --z-header: 900;
-  --z-modal: 990;
+  --z-search: 990;
 }
 
 /* ===================================================== */
@@ -506,7 +506,7 @@ button:active, a:active {
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
-  z-index: 1000;
+  z-index: var(--z-dropdown);
 
   /* Dimensions */
   width: 100%;
@@ -571,7 +571,7 @@ button#themesButton {
   background:  var(--theme-button-hover);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  z-index: 990;
+  z-index: var(--z-search);
 }
 
 #search {
