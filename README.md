@@ -7,7 +7,7 @@ This project is a simple portfolio website for showcasing personal work and proj
 2. Create a personal website, which I can use to help me create other sites that I may wish to make in the future.
 3. Demonstrate my ability to learn quickly (start: 1/28/2025 ; end: 2/5/2025 ; irregular work schedule due to school)
 
-## Goals Acheived:
+## Goals Acheived
 1. Gained familiarity with beginner HTML and CSS coding practices, utilized core features on Github (Issues, Pull Requests, and Github Pages) and Git (commits, staging, branches, merging, revert), programmed the entire site in VS Code, and learned to prompt LLMs for the purposes listed below.
 2. I have created the primary elements of the site, and will continue to add content, update the site, and fix issues.
 3. Granted that I am the sole evaluator of my experience doing this, I believe that I have demonstrated that I can learn quickly and apply the best of what I have learned. That skill, more than ever, is neccessary when working with AI, which was an essential learning tool in this project. Using AI is like following a tutorial, except you don't know if the tutor is always right. It is best used for searching basic elements that I, the person, can use to compile into a larger and more complex system.
