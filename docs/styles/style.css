@@ -18,7 +18,7 @@
   --theme-border: rgba(22, 22, 22, 0.2);
 
   /* backgrounds */
-  --theme-background: rbga(22, 22, 22, 0.6);
+  --theme-background: rgba(0, 0, 0, 0.7);
   --theme-header-background: rgba(22, 22, 22, 0.7);
   --theme-page-background: url('../images/Saint_Jerome_Writing-Caravaggio.jpg') center/cover no-repeat fixed;
   --theme-header-link-background: url('../images/Conversion_on_the_Way_to_Damascus-Caravaggio.jpg') center 30%/cover no-repeat fixed;
@@ -427,19 +427,19 @@ aside .card-content {
 /* ----------------------------------------------------- */
 
 .logo {
-  height: clamp(5px, 2vw, 20px);
-  width: clamp(5px, 2vw, 20px);
+  height: clamp(12px, 2vw, 20px);
+  width: clamp(12px, 2vw, 20px);
   margin-right: 10px;
   padding: 0;
   position: relative;
 }
 
 .logo.linkedin {
-  width: clamp(6px, 2.3vw, 24px);
+  width: clamp(15px, 2.3vw, 24px);
 }
 
 .logo.calDOTcom {
-  border-radius: clamp(4px, 0.4vw, 6px);
+  border-radius: clamp(9px, 0.4vw, 12px);
 }
 
 button, a {
