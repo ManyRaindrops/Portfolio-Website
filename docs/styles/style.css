@@ -168,7 +168,7 @@ body {
   --transition-timing: ease;
   
   /* z-index overview */
-  --z-dropdown: 1001;
+  --z-dropdown: 9999;
   --z-header: 900;
   --z-search: 990;
 }
@@ -538,6 +538,7 @@ button:active, a:active {
 /* dropdown button styles */
 button#themesButton {
   margin: 0;
+  z-index: 100;
   
 }
 
@@ -690,8 +691,6 @@ button.general-button {
   /* slows animations for mobile */
   * {
     transition-duration: 0.2s;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
   }
 
   .container {
