@@ -1,3 +1,13 @@
+# ===================================================== #
+#                                                       #
+# BSD 3-Clause License Copyright (c) 2025, Bertrand Lee #
+#                                                       #
+# ===================================================== #
+
+
+
+
+
 import os
 from datetime import datetime
 

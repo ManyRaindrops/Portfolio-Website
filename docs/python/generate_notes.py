@@ -1,3 +1,13 @@
+# ===================================================== #
+#                                                       #
+# BSD 3-Clause License Copyright (c) 2025, Bertrand Lee #
+#                                                       #
+# ===================================================== #
+
+
+
+
+
 import os
 import markdown
 
@@ -113,6 +123,8 @@ HTML_TEMPLATE = """<!-- ===================================================== --
             </div>
         </nav>
     </div>
+
+    <!-- System-wide search feature, to-be implemented (see generate_notes.py)-->
 
     <div id="search-bar"> 
         <input type="text" id="search" placeholder="Search...">
