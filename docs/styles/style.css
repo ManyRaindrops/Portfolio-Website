@@ -249,6 +249,10 @@ main {
   -moz-text-size-adjust: 100%; */
 }
 
+main img {
+  width: 100%;
+}
+
 nav, aside {
   position: -webkit-sticky;
   position: sticky;
