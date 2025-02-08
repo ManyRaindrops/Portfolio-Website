@@ -158,7 +158,6 @@ p {
   margin-bottom: 30px;
 }
 
-
 ul, ol {
   margin: 40px
 }
@@ -647,7 +646,7 @@ button.general-button {
 
 iframe {
   width: 100%;
-  height: clamp(500px, 75vh, 100%);
+  min-height: 75vh;
 }
 
 /* ----------------------------------------------------- */
