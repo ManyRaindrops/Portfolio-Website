@@ -79,6 +79,11 @@ HTML_TEMPLATE = """<!-- ===================================================== --
             <article>
                 {content}
             </article>
+            
+            <section id="connect">
+                <h2><em>GOT WORK?</em></h2>
+                <p>Let's connect.</p>
+            </section>
         </main>
 
         <nav class="left-side">
