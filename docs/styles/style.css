@@ -150,6 +150,19 @@ body {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+
+ul, ol {
+  margin: 20px
+}
+
 /* ===================================================== */
 /* GLOBAL VARIABLES                                      */
 /* ===================================================== */
