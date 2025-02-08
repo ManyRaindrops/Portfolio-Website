@@ -1,5 +1,4 @@
 # Portfolio Website
-
 This project is a simple portfolio website for showcasing personal work and projects. It is built using HTML, CSS, and JavaScript. All documentation of the process of learning how to build this website has been recorded.
 
 ## Project Goals
@@ -26,9 +25,9 @@ In this project, by 2/5/2025, I did not get to delve deeply into JavaScript.
 ## LLM Usage
 1. Explaning new/hard concepts: very useful for quickly getting a response rather than having to search through general coding websites.
 2. Writing helpful comments: especially useful for the learning process, when not all points are in memory or fully understood. Comments by AI are labeled: "AI-made"
-2. Repetitive tasks: using AI to replicate features of index.html to the other pages, auto generate skeleton HTML elements for testing (such as article sections)
-3. Generating Python scipts: used for automating and templating of journal and note entries; the focus of this project is on webdevelopment
-4. Writing temporary example code: helpful in the learning process to see relevant examples. Such AI generated code was removed or indicated as such
+3. Repetitive tasks: using AI to replicate features of index.html to the other pages, auto generate skeleton HTML elements for testing (such as article sections)
+4. Generating Python scipts: used for automating and templating of journal and note entries; the focus of this project is on webdevelopment
+5. Writing temporary example code: helpful in the learning process to see relevant examples. Such AI generated code was removed or indicated as such
 
 # File Explanations
 1. The primary pages (index.html, projects.html, etc.) and secondary pages (in folders journal_html, notes_html, etc.) contain all of the visible content that the user interacts with. main.js, styles.css, and all the images are in their respsective folders.
