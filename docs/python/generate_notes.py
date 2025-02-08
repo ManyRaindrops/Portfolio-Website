@@ -62,6 +62,9 @@ HTML_TEMPLATE = """<!-- ===================================================== --
     <link rel="stylesheet" href="{base_path}/styles/style.css">
 </head>
 <body id="top">
+
+    <!-- note to self: change buttons to href <a> -->
+
     <header>
         <h1 class="title">Bertrand's Portfolio</h1>
         <button class="gen-nav-menu">☰</button>
