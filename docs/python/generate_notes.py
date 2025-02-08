@@ -79,6 +79,8 @@ HTML_TEMPLATE = """<!-- ===================================================== --
             <article>
                 {content}
             </article>
+            
+            <!-- include a line break-->
 
             <!-- Future consideration of making this a separate box that floats under <main> and above <footer> -->
             <section id="connect">
