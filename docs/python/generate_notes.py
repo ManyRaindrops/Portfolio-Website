@@ -22,7 +22,7 @@ HTML_TEMPLATE = """<!-- ===================================================== --
 <!-- ===================================================== -->
 
 
-
+<!--note to self, change the file-naming code of this generator -->
 
 
 <!DOCTYPE html>
@@ -79,7 +79,7 @@ HTML_TEMPLATE = """<!-- ===================================================== --
             <article>
                 {content}
             </article>
-            
+
             <!-- include a line break-->
 
             <!-- Future consideration of making this a separate box that floats under <main> and above <footer> -->
