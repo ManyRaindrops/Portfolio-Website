@@ -79,7 +79,8 @@ HTML_TEMPLATE = """<!-- ===================================================== --
             <article>
                 {content}
             </article>
-            
+
+            <!-- Future consideration of making this a separate box that floats under <main> and above <footer> -->
             <section id="connect">
                 <h2><em>GOT WORK?</em></h2>
                 <p>Let's connect.</p>
