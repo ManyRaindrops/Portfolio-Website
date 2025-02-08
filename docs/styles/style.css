@@ -232,6 +232,14 @@ header {
   gap: 1rem;
 }
 
+.header-links button:hover {
+  transform: scale(1.03);
+}
+
+.header-links button:active {
+  transform: scale(0.97);
+}
+
 /* ----------------------------------------------------- */
 /* Nav, Main, Aside                                      */
 /* ----------------------------------------------------- */
