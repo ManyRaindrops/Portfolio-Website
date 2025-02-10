@@ -6,7 +6,7 @@
 
 
 
-
+# note to self, change the file-naming code of this generator
 
 import os
 import markdown
@@ -32,7 +32,7 @@ HTML_TEMPLATE = """<!-- ===================================================== --
 <!-- ===================================================== -->
 
 
-<!--note to self, change the file-naming code of this generator -->
+
 
 
 <!DOCTYPE html>
